@@ -177,3 +177,17 @@ console.log(food);
 
 
 
+//-----------> Question 13 <------------
+//======================================
+
+const colorconfiq = {
+    red: true,
+    blue: false,
+    green: true,
+    black: true,
+    yellow: false,
+};
+
+const color = ['pink', 'red', 'blue'];
+
+console.log(colorconfiq.red);  //----> true
