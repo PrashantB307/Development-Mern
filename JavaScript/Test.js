@@ -209,3 +209,12 @@ function num(a , b) {
 console.log(num(4 , 2));  //---> 4 is bigger  undefined
  
 console.log(num(1 , 2));  //---> 2 is bigger  undefined
+
+
+
+//-----------> Question 15 <------------
+//======================================
+
+let newlist = [1, 2, 3].push(4);
+
+//console.log(newlist.push(5));  //---> error .(push(5)) is not a function
