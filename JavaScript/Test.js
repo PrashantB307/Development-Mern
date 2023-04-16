@@ -218,3 +218,14 @@ console.log(num(1 , 2));  //---> 2 is bigger  undefined
 let newlist = [1, 2, 3].push(4);
 
 //console.log(newlist.push(5));  //---> error .(push(5)) is not a function
+
+
+
+//-----------> Question 16 <------------
+//======================================
+
+const users = { name: 'pawan', age: 21};
+const admins ={ admin: true, ...users };
+
+console.log(admins);
+//-----> { admin: true, name: 'pawan', age: 21 }
