@@ -191,3 +191,21 @@ const colorconfiq = {
 const color = ['pink', 'red', 'blue'];
 
 console.log(colorconfiq.red);  //----> true
+
+
+//-----------> Question 14 <------------
+//======================================
+
+function num(a , b) {
+    if(a > b){
+        console.log(`${a} is bigger`);
+    }else{
+        console.log(`${b} is bigger`)
+    }
+    return
+     a + b;
+}
+
+console.log(num(4 , 2));  //---> 4 is bigger  undefined
+ 
+console.log(num(1 , 2));  //---> 2 is bigger  undefined
