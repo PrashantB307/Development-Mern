@@ -28,12 +28,14 @@ let ans = str.substr(10 , 19);
 console.log(ans);
 console.log(str);
 
-              // Replacing --->
+               
+ // Replacing ---> 
+
 str = "Prashant Bhardwaj"; 
 console.log(str);
 
 
-      // upper case and lower case changing
+ // upper case and lower case changing =====>
 
 console.log(str.toLowerCase());
 console.log(str.toUpperCase());      
@@ -58,3 +60,24 @@ console.log(trimstr.length);
 console.log(trimstr.trim());
 trimstr = trimstr.trim();
 console.log(trimstr.length);
+
+
+//  Splits Methods =========>
+
+var str = "Hello my name is Prashant";
+console.log(str);
+
+var a = str.split(" ");
+console.log(a);
+//====> [ 'Hello', 'my', 'name', 'is', 'Prashant' ]
+
+
+var a = str.split("");
+console.log(a);
+// [
+//       'H', 'e', 'l', 'l', 'o', ' ',
+//       'm', 'y', ' ', 'n', 'a', 'm',
+//       'e', ' ', 'i', 's', ' ', 'P',
+//       'r', 'a', 's', 'h', 'a', 'n',
+//       't'
+//  ]
