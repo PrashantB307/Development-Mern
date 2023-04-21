@@ -1,3 +1,9 @@
+//---->  OS Module  <------
+//=========================
+
+//This module provide function that you camn use retrive
+//information from the underlying OS and interact with it.
+
 
 const os = require('os');
 // return the underlying architecure
