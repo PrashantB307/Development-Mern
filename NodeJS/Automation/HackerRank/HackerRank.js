@@ -5,6 +5,7 @@ let browserOpenPromise = puppeteer.launch({
     defaultViewport: null,
     args: ["--start-maximized"]
 });
+
 browserOpenPromise.then(function() {
     console.log("Browser is open");
 })
