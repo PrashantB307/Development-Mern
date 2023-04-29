@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
 
-let email = "xikibid862@robhung.com";
-let password = "pepcoding123";
+let email = "pb28.rkt@gmail.com";
+let password = "Bhardwaj@307";
 let cTab;
 
 let browserOpenPromise = puppeteer.launch({
@@ -42,8 +42,35 @@ browserOpenPromise.then(function(browser) {
     return willLoggedPromise; 
 })
 .then(function () {
-    console.log("Logged in to Hackerrank successfull");
+    console.log("Logged in to Hackerrank successfully");
+    //--waitAndClick :=> It will wait for the entire webpage to load 
+                        // and then click on the node.
+    let algoOpenPromise = waitAndClick("div[data-automation ='algorithms']");
+    return algoOpenPromise;
+})
+.then(function () {
+    console.log ("Algorithm page is Opened");
 })
 .catch(function (err) {
     console.log(err);
 });
+
+function waitAndClick(algoBtn) {
+    let myPromise = new Promise(function (resolve, reject) {
+        let waiTfoPromise = cTab.waitForSelector(algoBtn);
+        waiTfoPromise.then(function () {
+            console.log("Algo btn is found");
+            let clickPromise = cTab.click(algoBtn);
+            return clickPromise;
+        })
+        .then(function () {
+            console.log("Algo btn is clicked");
+            resolve();
+        })
+        .catch(function (err) {
+            console.log(err);
+        })
+    });
+
+    return myPromise;
+}
