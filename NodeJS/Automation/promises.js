@@ -23,6 +23,12 @@ console.log("before");
 // Promising Working --->
 //=======================
 
+// A promise is basically an advancement of callbacks in Node.
+//   In other words, a promise is a JavaScript object which is
+//   used to handle all the asynchronous data operations. 
+//   While developing an application you may encounter that you
+//    are using a lot of nested callback functions. 
+
 let promiseThatFileRead = fs.promises.readFile("f1.txt");
 console.log(promiseThatFileRead);
 promiseThatFileRead.then(printData);
