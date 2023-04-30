@@ -1,9 +1,10 @@
+
 const puppeteer = require("puppeteer");
 
 let email = "pb28.rkt@gmail.com";
 let password = "Bhardwaj@307";
-let cTab;
 
+let cTab;
 let browserOpenPromise = puppeteer.launch({
     headless: false,
     defaultViewport: null,
@@ -16,18 +17,21 @@ browserOpenPromise.then(function(browser) {
     console.log("Browser is open");
     console.log(browser);
     //An array of all open paes inside the Browser
+    //returns an array with all the pages in all browser contexts
     let alltabsPromise = browser.pages();
     return alltabsPromise;
 })
 .then(function (allTabsArr) {
     cTab = allTabsArr[0];
     console.log("new tab");
-    //URL to navigatye page to
+    //URL to navigate page to
     let visitLoginPage = cTab.goto("https://www.hackerrank.com/auth/login");
     return visitLoginPage;
 })
-.then(function () {
+.then(function (data) {
+    //console.log(data);
     console.log("HackerRank Login Page opened");
+    //selector (where to type), data(what to type)
     let emailwillTypePromise = cTab.type("input[name = 'username']", email);
     return emailwillTypePromise;
 })
@@ -38,8 +42,9 @@ browserOpenPromise.then(function(browser) {
 })
 .then(function () {
     console.log("Password is typed");
-    let willLoggedPromise = cTab.click(".ui-btn.ui-btn-large.ui-btn-primary.auth-button.ui-btn-styled");
-    return willLoggedPromise; 
+    let willLoggedPromise = cTab.click(".ui-btn.ui-btn-large.ui-btn-primary.auth-button.ui-btn-styled"
+        );
+        return willLoggedPromise; 
 })
 .then(function () {
     console.log("Logged in to Hackerrank successfully");
@@ -50,13 +55,33 @@ browserOpenPromise.then(function(browser) {
 })
 .then(function () {
     console.log ("Algorithm page is Opened");
+    let allQuesPromise = cTab.waitForSelector("a[data-analytics='ChallengeListChallengeName']");
+    return allQuesPromise;
+})
+.then(function () {
+    function getAllQuesLink() {
+        let allElemArr = document.querySelectorAll("a[data-analytics='ChallengeListChallengeName']");
+        let linksArr = [];
+        for(let i = 0; i < allElemArr.length; i++){
+            linksArr.push[allElemArr[i].getAttribute("href")];
+        }
+        return linksArr;
+    }
+
+    let linksArrPromise = cTab.evaluate(getAllQuesLink);
+    return linksArrPromise;
+})
+.then(function (linksArr) {
+    console.log("Links to all ques. received");
+    console.log(linksArr);
+    //Questions solve krna h
 })
 .catch(function (err) {
     console.log(err);
 });
 
 function waitAndClick(algoBtn) {
-    let myPromise = new Promise(function (resolve, reject) {
+    let waitClickPromise = new Promise(function (resolve, reject) {
         let waiTfoPromise = cTab.waitForSelector(algoBtn);
         waiTfoPromise.then(function () {
             console.log("Algo btn is found");
@@ -65,12 +90,12 @@ function waitAndClick(algoBtn) {
         })
         .then(function () {
             console.log("Algo btn is clicked");
-            resolve();
+            //resolve();
+            
         })
         .catch(function (err) {
             console.log(err);
         })
-    });
-
-    return myPromise;
+    }); 
+    return waitClickPromise;
 }
