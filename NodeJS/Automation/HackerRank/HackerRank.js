@@ -90,7 +90,7 @@ function waitAndClick(algoBtn) {
         })
         .then(function () {
             console.log("Algo btn is clicked");
-            //resolve();
+            resolve();
             
         })
         .catch(function (err) {
