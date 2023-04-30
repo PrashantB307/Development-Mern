@@ -73,8 +73,13 @@ browserOpenPromise.then(function(browser) {
 })
 .then(function (linksArr) {
     console.log("Links to all ques. received");
-    console.log(linksArr);
+    //console.log(linksArr);
     //Questions solve krna h
+    let quesWillSolvePromise = questionSolver(linksArr[0], 0);
+    return quesWillSolvePromise;
+})
+.then(function () {
+    console.log("Question is Solved");
 })
 .catch(function (err) {
     console.log(err);
@@ -98,4 +103,19 @@ function waitAndClick(algoBtn) {
         })
     }); 
     return waitClickPromise;
+}
+
+function questionSolver(url, idx) {
+    return new Promise(function (resolve, reject) {
+    let fullLink = `https://www.hackerrank.com${url}`;
+    let goToQuesPagePromise = cTab.goto(fullLink);
+    goToQuesPagePromise
+    .then(function () {
+        console.log("Question Opened");
+        resolve();
+        })
+        .catch(function (err) {
+            console.log(err);
+        })
+    });
 }
