@@ -63,7 +63,7 @@ browserOpenPromise.then(function(browser) {
         let allElemArr = document.querySelectorAll("a[data-analytics='ChallengeListChallengeName']");
         let linksArr = [];
         for(let i = 0; i < allElemArr.length; i++){
-            linksArr.push[allElemArr[i].getAttribute("href")];
+            linksArr.push(allElemArr[i].getAttribute("href"));
         }
         return linksArr;
     }
