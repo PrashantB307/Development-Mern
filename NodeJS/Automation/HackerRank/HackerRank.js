@@ -3,6 +3,7 @@ const puppeteer = require("puppeteer");
 
 let email = "pb28.rkt@gmail.com";
 let password = "Bhardwaj@307";
+let { answer } = require("./codes"); 
 
 let cTab;
 let browserOpenPromise = puppeteer.launch({
@@ -112,7 +113,18 @@ function questionSolver(url, idx) {
     goToQuesPagePromise
     .then(function () {
         console.log("Question Opened");
-        resolve();
+        // tick the custom input box mark
+        let waitForChekBoxandClickPromise = waitAndClick(".checkbox-input");
+        return waitForChekBoxandClickPromise;
+        })
+        .then(function () {
+            //select the box where code will be typed
+            let waitForTextBoxPromise = cTab.waitForSelector(".custominput");
+            return waitForTextBoxPromise;
+        })
+        .then(function () {
+            let codeWilltypedPromise = cTab.type(".custominput", answer[idx]);
+            return codeWilltypedPromise;
         })
         .catch(function (err) {
             console.log(err);
