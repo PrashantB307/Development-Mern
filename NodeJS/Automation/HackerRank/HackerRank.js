@@ -100,7 +100,7 @@ function waitAndClick(algoBtn) {
             
         })
         .catch(function (err) {
-            console.log(err);
+            reject(err);
         })
     }); 
     return waitClickPromise;
@@ -126,8 +126,51 @@ function questionSolver(url, idx) {
             let codeWilltypedPromise = cTab.type(".custominput", answer[idx]);
             return codeWilltypedPromise;
         })
-        .catch(function (err) {
-            console.log(err);
+        .then(function () {
+            // control key is press promise
+            let controlpresslPromise = cTab.keyboard.press("Control");
+            return controlpresslPromise;
         })
+        .then(function () {
+            // a key is press promise
+            let aKeypresslPromise = cTab.keyboard.press("a");
+            return aKeypresslPromise;
+        })
+        .then(function () {
+            // x key is press promise
+            let xKeypresslPromise = cTab.keyboard.press("x");
+            return xKeypresslPromise;
+        })
+        .then(function () {
+            // selet the editor promise
+            let cusorOnEditorPromise = cTab.click(".monaco-editor.no-user-select .vs");
+            return cusorOnEditorPromise;
+        })
+        .then(function () {
+            // a key is press promise
+            let aKeypresslPromise = cTab.keyboard.press("a");
+            return aKeypresslPromise;
+        })
+        .then(function () {
+            // v key is press promise
+            let vKeypresslPromise = cTab.keyboard.press("v");
+            return vKeypresslPromise;
+        })
+        .then(function () {
+            let submitBtnClickPromise = cTab.click(".hr-monaco-submit");
+            return submitBtnClickPromise;
+        })
+        .then(function () {
+            // control key is down promise
+            let controldownlPromise = cTab.keyboard.up("Control");
+            return controldownlPromise;
+        })
+        .then(function () {
+            console.log("Code is Submitted Successfully");
+            resolve();
+        })
+        .catch(function (err) {
+           reject(err);
+        });
     });
 }
