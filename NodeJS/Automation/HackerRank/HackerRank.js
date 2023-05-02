@@ -1,8 +1,9 @@
 
 const puppeteer = require("puppeteer");
 
-let email = "pb28.rkt@gmail.com";
-let password = "Bhardwaj@307";
+let { email, password } = require('./secrets');
+// let email = "pb28.rkt@gmail.com";
+// let password = "Bhardwaj@307";
 let { answer } = require("./codes"); 
 
 let cTab;
