@@ -48,16 +48,21 @@
 //<============= Print 1 to 10 with 2 sec. gapping ===========>
 
 
-// for(let i = 1; i <= 10; i++){
-//     setTimeout(function () {
-//         console.log(i);
-//     }, 2000*i);
-// }
+for(let i = 1; i <= 10; i++){
+    setTimeout(function () {
+        console.log(i);
+    }, 2000*i);
+}
 
 //<================ Another Way (Var) ==================>
 
-setTimeout(function () {
-    for(var i = 1; i <= 10; i++){
-        console.log(i);
+for(var i = 1; i <= 10; i++){
+    function outer(a) {
+        setTimeout(function () {
+            console.log(a);
+        }, 2000 * a);
+            
     }
-}, 2000);
+
+    outer(i);
+}
