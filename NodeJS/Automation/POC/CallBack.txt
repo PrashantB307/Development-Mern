@@ -10,4 +10,4 @@ CallBack is ==> Synchronous and Single Threaded.
 
 
 
-Single Threaded  --> It execute one proces at one time.
+Single Threaded  --> It  proccess one command at one time.
