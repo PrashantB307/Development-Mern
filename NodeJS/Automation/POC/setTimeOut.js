@@ -91,3 +91,17 @@ function a() {
 let fn = a();
 let ans = fn();
 console.log(ans); ///====>  100
+
+
+//<=======================================================>
+
+
+console.log("Befor");
+setTimeout( function () {
+    console.log("Time Over");
+}, 5000);
+console.log("After");
+
+//======> Before
+     //   After
+     //   (After 5 sec) Time over
