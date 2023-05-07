@@ -121,5 +121,5 @@ fetch("https://jsonplaceholder.typicode.com/todos/1")
     .then(function (json) {
         console.log(json) 
     });
-console.log("Before");  
+console.log("After");  
 //========> { userId: 1, id: 1, title: 'delectus aut autem', completed: false }
