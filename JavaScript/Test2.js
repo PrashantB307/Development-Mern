@@ -46,3 +46,19 @@ console.log("Line 6: ", a);  //===> Line 6:  undefined
 a = 10;
 console.log("Line 8: ", a);  //===> Line 8:  10
  
+
+//<--------------- Question 5 ------------------>
+//===============================================
+
+const a = 10;
+const b = 20;
+b = b + 10;
+console.log(a + b);  //===> Error (b cann't be re-inisilise)
+
+
+//<--------------- Question 6 ------------------>
+//===============================================
+
+var a ="Bhardwaj";
+var result = a.substring(3, 7);
+console.log(result);   //===> rdwa
