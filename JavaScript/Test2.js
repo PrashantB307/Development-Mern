@@ -64,34 +64,69 @@
 // console.log(result);   //===> rdwa
 
 
-// <--------------- Question 7 ------------------>
+// // <--------------- Question 7 ------------------>
+// // ===============================================
+
+// var a = "hello";
+// var sum = 0;
+// for(var i = 0; i < a.length; i++){
+//     sum += (a[i] - "a");
+// }
+// console.log(sum);  //===> NaN
+
+
+// //<--------------- Question 8 ------------------>
+// // ===============================================
+
+// let obj1 = {
+//     fName : "Pawan",
+//     sName : "Bhardwaj",
+//     age : 22,
+//     city : "Varanasi"
+// }
+// delete obj1.age;
+// console.log(obj1);
+// //===> { fName: 'Pawan', sName: 'Bhardwaj', city: 'Varanasi' }
+
+
+// //<--------------- Question 9 ------------------>
+// // ===============================================
+
+// var a = 29;
+// var b = a = 30;
+// console.log(a);  //===> a = 30 
+
+
+//<--------------- Question 10 ------------------>
 // ===============================================
 
-var a = "hello";
-var sum = 0;
-for(var i = 0; i < a.length; i++){
-    sum += (a[i] - "a");
+(function (a) {
+    return (function () {
+        console.log(a);   //===> 12
+        a = 6;
+    }) ()
+}) (12);
+
+
+//<--------------- Question 11 ------------------>
+// ===============================================
+
+var num1 = 10;
+let num2 = 10;
+{
+    var num1 = 20;
+    let num2 = 20;
+    console.log("num1:", num1, "num2:", num2);
 }
-console.log(sum);  //===> NaN
+//===> num1: 20 num2: 20
 
 
-//<--------------- Question 8 ------------------>
+//<--------------- Question 12 ------------------>
 // ===============================================
 
-let obj1 = {
-    fName : "Pawan",
-    sName : "Bhardwaj",
-    age : 22,
-    city : "Varanasi"
+if(12 == "12"){
+    console.log(true);
+}else{
+    console.log(false);
 }
-delete obj1.age;
-console.log(obj1);
-//===> { fName: 'Pawan', sName: 'Bhardwaj', city: 'Varanasi' }
-
-
-//<--------------- Question 9 ------------------>
-// ===============================================
-
-var a = 29;
-var b = a = 30;
-console.log(a);  //===> a = 30 
+//===> true
