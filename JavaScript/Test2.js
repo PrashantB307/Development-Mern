@@ -11,17 +11,17 @@ console.log(num - a);   //===> -6
 //<--------------- Question 2 ------------------>
 //===============================================
 
-let a = 1;
-{ let a = 2;
-    { let a = 3;
-        { let a = 4;
-            console.log(a);  //===> 4
+let j = 1;
+{ let j = 2;
+    { let j = 3;
+        { let j = 4;
+            console.log(j);  //===> 4
         }
-        console.log(a);  //===> 3
+        console.log(j);  //===> 3
     }
-    console.log(a);  //===> 2
+    console.log(j);  //===> 2
 }
-console.log(a);  //===> 1
+console.log(j);  //===> 1
  
 
 //<--------------- Question 3 ------------------>
@@ -40,37 +40,37 @@ console.log("num1:", num1, "num2:", num2);
 //<--------------- Question 4 ------------------>
 //===============================================
 
-console.log("Line 4: ", a);  //===> Line 4:  undefined
-var a;
-console.log("Line 6: ", a);  //===> Line 6:  undefined
-a = 10;
-console.log("Line 8: ", a);  //===> Line 8:  10
+console.log("Line 4: ", h);  //===> Line 4:  undefined
+var h;
+console.log("Line 6: ", h);  //===> Line 6:  undefined
+h = 10;
+console.log("Line 8: ", h);  //===> Line 8:  10
  
 
 //<--------------- Question 5 ------------------>
 //===============================================
 
-const a = 10;
-const b = 20;
-b = b + 10;
-console.log(a + b);  //===> Error (b cann't be re-inisilise)
+const f = 10;
+const g = 20;
+g = g + 10;
+console.log(f + g);  //===> Error (b cann't be re-inisilise)
 
 
 //<--------------- Question 6 ------------------>
 //===============================================
 
-var a ="Bhardwaj";
-var result = a.substring(3, 7);
+var e ="Bhardwaj";
+var result = e.substring(3, 7);
 console.log(result);   //===> rdwa
 
 
 // <--------------- Question 7 ------------------>
 // ===============================================
 
-var a = "hello";
+var A = "hello";
 var sum = 0;
-for(var i = 0; i < a.length; i++){
-    sum += (a[i] - "a");
+for(var i = 0; i < A.length; i++){
+    sum += (A[i] - "a");
 }
 console.log(sum);  //===> NaN
 
@@ -92,9 +92,9 @@ console.log(obj1);
 //<--------------- Question 9 ------------------>
 // ===============================================
 
-var a = 29;
-var b = a = 30;
-console.log(a);  //===> a = 30 
+var c = 29;
+var d = c = 30;
+console.log(c);  //===> a = 30 
 
 
 //<--------------- Question 10 ------------------>
@@ -111,12 +111,12 @@ console.log(a);  //===> a = 30
 //<--------------- Question 11 ------------------>
 // ===============================================
 
-var num1 = 10;
-let num2 = 10;
+var n1 = 10;
+let n2 = 10;
 {
-    var num1 = 20;
-    let num2 = 20;
-    console.log("num1:", num1, "num2:", num2);
+    var n1 = 20;
+    let n2 = 20;
+    console.log("num1:", n1, "num2:", n2);
 }
 //===> num1: 20 num2: 20
 
