@@ -24,41 +24,74 @@
 // console.log(a);  //===> 1
  
 
-//<--------------- Question 3 ------------------>
-//===============================================
+// //<--------------- Question 3 ------------------>
+// //===============================================
 
-var num1 = 10;
-let num2 = 10;
-{
-    var num1 = 20;
-    let num2 = 20;
-}
-console.log("num1:", num1, "num2:", num2);
-//===> num1: 20 num2: 10
+// var num1 = 10;
+// let num2 = 10;
+// {
+//     var num1 = 20;
+//     let num2 = 20;
+// }
+// console.log("num1:", num1, "num2:", num2);
+// //===> num1: 20 num2: 10
 
 
-//<--------------- Question 4 ------------------>
-//===============================================
+// //<--------------- Question 4 ------------------>
+// //===============================================
 
-console.log("Line 4: ", a);  //===> Line 4:  undefined
-var a;
-console.log("Line 6: ", a);  //===> Line 6:  undefined
-a = 10;
-console.log("Line 8: ", a);  //===> Line 8:  10
+// console.log("Line 4: ", a);  //===> Line 4:  undefined
+// var a;
+// console.log("Line 6: ", a);  //===> Line 6:  undefined
+// a = 10;
+// console.log("Line 8: ", a);  //===> Line 8:  10
  
 
-//<--------------- Question 5 ------------------>
-//===============================================
+// //<--------------- Question 5 ------------------>
+// //===============================================
 
-const a = 10;
-const b = 20;
-b = b + 10;
-console.log(a + b);  //===> Error (b cann't be re-inisilise)
+// const a = 10;
+// const b = 20;
+// b = b + 10;
+// console.log(a + b);  //===> Error (b cann't be re-inisilise)
 
 
-//<--------------- Question 6 ------------------>
-//===============================================
+// //<--------------- Question 6 ------------------>
+// //===============================================
 
-var a ="Bhardwaj";
-var result = a.substring(3, 7);
-console.log(result);   //===> rdwa
+// var a ="Bhardwaj";
+// var result = a.substring(3, 7);
+// console.log(result);   //===> rdwa
+
+
+// <--------------- Question 7 ------------------>
+// ===============================================
+
+var a = "hello";
+var sum = 0;
+for(var i = 0; i < a.length; i++){
+    sum += (a[i] - "a");
+}
+console.log(sum);  //===> NaN
+
+
+//<--------------- Question 8 ------------------>
+// ===============================================
+
+let obj1 = {
+    fName : "Pawan",
+    sName : "Bhardwaj",
+    age : 22,
+    city : "Varanasi"
+}
+delete obj1.age;
+console.log(obj1);
+//===> { fName: 'Pawan', sName: 'Bhardwaj', city: 'Varanasi' }
+
+
+//<--------------- Question 9 ------------------>
+// ===============================================
+
+var a = 29;
+var b = a = 30;
+console.log(a);  //===> a = 30 
