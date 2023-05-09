@@ -15,6 +15,9 @@ console.log(f());  //===> Promise { 'Hi' }
 //-------------------> async <-----------------------
 //====================================================
 
+//===> The word “async” means one a function always returns
+//      a promise.
+
 async function f() {
     return "Hello"
 }
