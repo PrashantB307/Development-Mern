@@ -19,3 +19,20 @@
 // These statement executed regardless of whether an exception was
 // thrown or caught.
 
+
+
+try {
+    console.log("In try");
+} catch (e) {
+    console.log(e);
+} finally {
+    console.log("I am always executed");
+    console.log("Hurray");
+}
+
+// ====> In try
+//       I am always executed
+//       Hurray
+
+
+
