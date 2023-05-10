@@ -36,3 +36,11 @@ try {
 
 
 
+try {
+    throw new Error("There are some mistake");
+} catch (e) {
+    console.log(e);
+} finally {
+    console.log("I am always executed");
+    console.log("Hurray");
+}
