@@ -44,3 +44,8 @@ try {
     console.log("I am always executed");
     console.log("Hurray");
 }
+
+//===> There are some mistake
+//     (error)
+//     I am always executed
+//     Hurray

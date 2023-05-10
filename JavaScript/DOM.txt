@@ -8,5 +8,5 @@ DOM represents an HTML document in memory and how to use APIs
 to create web content and applications.
 
 DOM is a part of Browser API.
-It is used to manipulate our webpage.
+It is used to manipulate our webpage(Style, structure , content)
 
