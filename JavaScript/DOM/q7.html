@@ -39,14 +39,18 @@
         //     if its on it should not allow to type and show "caps on" on screen,
         //     also it should only allow to type if the shift in pressed down.
         
-        let inputBox = document.querySelector("#pass");
-        let message = document.querySelector("p");
+        let inputBox=document.querySelector("#pass");
+        let message=document.querySelector("p");
+        let isShift=false;
 
-        inputBox.addEventListener("keydown", function(e) {
-            if(e.getModifierState("Capslock")){
-                message.style.display = "block";
-            }else{
-                message.style.display = "none";
+        inputBox.addEventListener("keydown",function(e){
+            //boolean , wether capslock is on (true) or off (false)
+            if(e.getModifierState("CapsLock")){
+                message.style.display="block"; 
+                e.preventDefault();
+            }
+            else {
+                message.style.display="none";
             }
         })
  
