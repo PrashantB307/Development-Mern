@@ -10,3 +10,5 @@ to create web content and applications.
 DOM is a part of Browser API.
 It is used to manipulate our webpage(Style, structure , content)
 
+DOM is a important part of JS
+
