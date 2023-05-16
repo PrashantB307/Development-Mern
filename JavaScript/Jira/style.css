@@ -9,7 +9,7 @@ body {
 
 .toolbox-cont {
     height: 5rem;
-    background-color: gray;
+    background-color: #4b4b4b;
     display: flex;
     align-items: center;
 }
@@ -21,7 +21,7 @@ body {
 .toolbox-color-cont {
     height: 3.5rem;
     width: 18rem;
-    background-color: rgb(59, 46, 46);
+    background-color: #3d3d3d;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -30,7 +30,7 @@ body {
 .action-btn-cont {
     height: 3.5rem;
     width: 7rem;
-    background-color: rgb(59, 46, 46);
+    background-color: #3d3d3d;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -38,21 +38,23 @@ body {
 
 .color{
     height: 1.5rem;
-    width: 3 rem;
+    width: 3rem;
 }
 
 .lightpink {
     background-color: lightpink;
 }
-
 .lightgreen {
-    background: lightgreen;
+    background-color: lightgreen;
 }
-
 .lightblue {
-    background: lightblue;
+    background-color: lightblue;
+}
+.black {
+    background-color: black;
 }
 
-.black {
-    background: black;
+.action-btn-cont>*{
+    font-size: 2rem;
+    color: azure;
 }
