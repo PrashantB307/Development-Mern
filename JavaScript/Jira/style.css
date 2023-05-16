@@ -26,3 +26,12 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
+
+.action-btn-cont {
+    height: 3.5rem;
+    width: 7rem;
+    background-color: rgb(59, 46, 46);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
