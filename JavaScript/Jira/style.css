@@ -35,3 +35,24 @@ body {
     align-items: center;
     justify-content: space-evenly;
 }
+
+.color{
+    height: 1.5rem;
+    width: 3 rem;
+}
+
+.lightpink {
+    background-color: lightpink;
+}
+
+.lightgreen {
+    background: lightgreen;
+}
+
+.lightblue {
+    background: lightblue;
+}
+
+.black {
+    background: black;
+}
