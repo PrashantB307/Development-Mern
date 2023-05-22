@@ -1,14 +1,13 @@
 const addBtn = document.querySelector(".add-btn");
 const modalCont = document.querySelector(".modal-cont");
 
-let addModal = false;
+let isModalPresent = false;
 addBtn.addEventListener("click" , function() {
-    if(!addModal) {
+    if(!isModalPresent) {
         modalCont.style.display = "flex";
-        addModal = !addModal;
     }
     else{
         modalCont.style.display = "none";
-        addModal = !addModal;
     }
+    isModalPresent = !isModalPresent;
 })
