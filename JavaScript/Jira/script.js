@@ -11,3 +11,14 @@ addBtn.addEventListener("click" , function() {
     }
     isModalPresent = !isModalPresent;
 })
+
+const allPriorityColors = document.querySelectorAll(".priority-color");
+
+allPriorityColors.forEach(function (colorElement) {
+    colorElement.addEventListener("click", function () {
+        allPriorityColors.forEach(function (priorityColorElem) {
+            priorityColorElem.classList.remove("active");
+        });
+        colorElement.classList.add("active");
+    });
+});
