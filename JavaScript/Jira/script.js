@@ -1,6 +1,7 @@
 const addBtn = document.querySelector(".add-btn");
 const modalCont = document.querySelector(".modal-cont");
-
+let colors = ['lightpink', 'lightgreen', 'lightblue', 'black'];
+let modalPriorityColor = colors[colors.length - 1];
 let isModalPresent = false;
 addBtn.addEventListener("click" , function() {
     if(!isModalPresent) {
