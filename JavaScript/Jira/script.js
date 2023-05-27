@@ -5,10 +5,10 @@ const allPriorityColors = document.querySelectorAll(".priority-color");
 let colors = ['lightpink', 'lightgreen', 'lightblue', 'black'];
 let modalPriorityColor = colors[colors.length - 1];
 let textAreaCont = document.querySelector(".textarea-cont");
-
 const mainCont = document.querySelector(".main-cont");
-
 let ticketArr = [];
+
+let toolBoxColors = document.querySelectorAll(".color");
 
 // To open close Modal container
 let isModalPresent = false;
@@ -72,9 +72,54 @@ function createTicket(ticketColor, data, ticketId) {
                 data, 
                 ticketId: id
             }
-            );
+        );
         localStorage.setItem("tickets", JSON.stringify(ticketArr));
     }
 }
 
-// Get all tickets from local Storage 
+// Get all tickets from local Storage
+if(localStorage.getItem("tickets")) {
+    ticketArr = JSON.parse(localStorage.getItem("tickets"));
+    ticketArr.forEach(function(ticketObj) {
+        createTicket(ticketObj.ticketColor, ticketObj.data, ticketObj.ticketId);
+    })
+} 
+
+// Filter tickets on the basis of ticket colors
+for(let i = 0; i < toolBoxColors.length; i++){
+    toolBoxColors[i].addEventListener("click", function () {
+        let currtoolBoxColor = toolBoxColors[i].classList[0];
+        let filteredTickets = ticketArr.filter(function (ticketObj) {
+            return currtoolBoxColor == ticketObj.ticketColor;
+        });
+
+        // Remove all the tickets
+        let allTickets = document.querySelectorAll(".ticket-cont");
+        for(let  i = 0; i < allTickets.length; i++){
+            allTickets[i].remove();
+        }
+
+        // Display Filtered Tickets
+        filteredTickets.forEach(function(ticketObj) {
+            createTicket(
+                ticketObj.ticketColor,
+                ticketObj.data,
+                ticketObj.ticketId
+            );
+        })
+    })
+
+    // To display all the tickets of all colors on double clicking.
+    toolBoxColors[i].addEventListener("dblclick", function () {
+        // Remove all the color specific tickets.
+        let allTickets = querySelectorAll(".ticket-cont");
+        for(let i = 0; i < allTickets.length; i++) {
+            allTickets[i].remove();
+        }
+
+        // Display all tickets.
+        ticketArr.forEach(function (ticketObj) {
+            createTicket(ticketObj.ticketColor, icketObj.data, ticketObj.ticketId);
+        });
+    })
+}
