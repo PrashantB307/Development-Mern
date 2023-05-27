@@ -112,14 +112,14 @@ for(let i = 0; i < toolBoxColors.length; i++){
     // To display all the tickets of all colors on double clicking.
     toolBoxColors[i].addEventListener("dblclick", function () {
         // Remove all the color specific tickets.
-        let allTickets = querySelectorAll(".ticket-cont");
+        let allTickets = document.querySelectorAll(".ticket-cont");
         for(let i = 0; i < allTickets.length; i++) {
             allTickets[i].remove();
         }
 
         // Display all tickets.
         ticketArr.forEach(function (ticketObj) {
-            createTicket(ticketObj.ticketColor, icketObj.data, ticketObj.ticketId);
+            createTicket(ticketObj.ticketColor, ticketObj.data, ticketObj.ticketId);
         });
     })
 }
