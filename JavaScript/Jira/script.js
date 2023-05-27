@@ -8,8 +8,9 @@ let textAreaCont = document.querySelector(".textarea-cont");
 
 const mainCont = document.querySelector(".main-cont");
 
+let ticketArr = [];
 
-
+// To open close Modal container
 let isModalPresent = false;
 addBtn.addEventListener("click" , function() {
     if(!isModalPresent) {
@@ -22,7 +23,9 @@ addBtn.addEventListener("click" , function() {
 });
 
 //console.log(allPriorityColors);
-
+ 
+// To remove and add active class from each priority color
+// of Modal container 
 allPriorityColors.forEach(function (colorElement) {
     colorElement.addEventListener("click", function () {
         allPriorityColors.forEach(function (priorityColorElem) {
@@ -33,6 +36,7 @@ allPriorityColors.forEach(function (colorElement) {
     });
 });
 
+// To Generate and display a ticket
 modalCont.addEventListener("keydown", function (e) {
     let key = e.key;
     if(key == "Shift"){
@@ -48,6 +52,7 @@ modalCont.addEventListener("keydown", function (e) {
     }
 }); 
 
+// Function to create new ticket
 function createTicket(ticketColor, data, ticketId) {
     let id = ticketId || uid();
     let ticketCont = document.createElement("div"); 
@@ -61,7 +66,15 @@ function createTicket(ticketColor, data, ticketId) {
     mainCont.appendChild(ticketCont);
 
     if(!ticketId) {
-        ticketArr.push({ticketColor, data, ticketId: id});
+        ticketArr.push(
+            {
+                ticketColor, 
+                data, 
+                ticketId: id
+            }
+            );
         localStorage.setItem("tickets", JSON.stringify(ticketArr));
     }
 }
+
+// Get all tickets from local Storage 
