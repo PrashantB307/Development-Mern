@@ -7,9 +7,12 @@ let modalPriorityColor = colors[colors.length - 1];
 let textAreaCont = document.querySelector(".textarea-cont");
 const mainCont = document.querySelector(".main-cont");
 let ticketArr = [];
-
 let toolBoxColors = document.querySelectorAll(".color");
+let removeBtn = document.querySelector(".remove-btn");
 
+
+let lockClass = "fa-lock";
+let unlockClass = "fa-lock-open";
 // To open close Modal container
 let isModalPresent = false;
 addBtn.addEventListener("click" , function() {
@@ -24,8 +27,8 @@ addBtn.addEventListener("click" , function() {
 
 //console.log(allPriorityColors);
  
-// To remove and add active class from each priority color
-// of Modal container 
+// To remove and add active class from each priority color of
+//  Modal container 
 allPriorityColors.forEach(function (colorElement) {
     colorElement.addEventListener("click", function () {
         allPriorityColors.forEach(function (priorityColorElem) {
@@ -48,7 +51,7 @@ modalCont.addEventListener("keydown", function (e) {
         textAreaCont.value = "";
         allPriorityColors.forEach(function (colorElem) {
             colorElem.classList.remove("active");
-        })
+        });
     }
 }); 
 
@@ -61,10 +64,19 @@ function createTicket(ticketColor, data, ticketId) {
         <div class="ticket-color ${ticketColor}"></div>
         <div class="ticket-id">${id}</div>  
         <div class="task-area">${data}</div>
+        <div class="ticket-lock">
+          <i class="fa-solid fa-lock"></i>
+        </div>
     `;
 
     mainCont.appendChild(ticketCont);
 
+    handleRemoval(ticketCont, id);
+    handleColor(ticketCont, id);
+    handleLock(ticketCont, id);
+
+    // If ticket is being created for the 1st time,then ticket
+    // id would be undefined.
     if(!ticketId) {
         ticketArr.push(
             {
@@ -75,7 +87,7 @@ function createTicket(ticketColor, data, ticketId) {
         );
         localStorage.setItem("tickets", JSON.stringify(ticketArr));
     }
-}
+};
 
 // Get all tickets from local Storage
 if(localStorage.getItem("tickets")) {
@@ -89,8 +101,10 @@ if(localStorage.getItem("tickets")) {
 for(let i = 0; i < toolBoxColors.length; i++){
     toolBoxColors[i].addEventListener("click", function () {
         let currtoolBoxColor = toolBoxColors[i].classList[0];
+
         let filteredTickets = ticketArr.filter(function (ticketObj) {
-            return currtoolBoxColor == ticketObj.ticketColor;
+            if(currtoolBoxColor == ticketObj.ticketColor) return ticketObj;
+            //return currtoolBoxColor == ticketObj.ticketColor;
         });
 
         // Remove all the tickets
@@ -111,6 +125,7 @@ for(let i = 0; i < toolBoxColors.length; i++){
 
     // To display all the tickets of all colors on double clicking.
     toolBoxColors[i].addEventListener("dblclick", function () {
+
         // Remove all the color specific tickets.
         let allTickets = document.querySelectorAll(".ticket-cont");
         for(let i = 0; i < allTickets.length; i++) {
@@ -123,3 +138,4 @@ for(let i = 0; i < toolBoxColors.length; i++){
         });
     })
 }
+
