@@ -71,3 +71,14 @@ clone1.sizes.height = 165;
 
 console.log(clone1);   //===>   { name: 'Pawan', age: 22, sizes: { height: 165, weight: 70 } }
 console.log(user1);    //===>   { name: 'Pawan', age: 22, sizes: { height: 165, weight: 70 } }
+
+
+
+//=====================> Flatten an Object <=======================
+//-----------------------------------------------------------------
+
+let flattenedObj = {
+    "name" : "Pawan",
+    "sizes.height" : 182,
+    "sizes.weight" : 50
+}
