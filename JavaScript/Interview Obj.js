@@ -18,3 +18,21 @@ console.log(obj);
 
 
 
+//======================> Object.assign( ) <======================
+//----------------------------------------------------------------
+
+let user = {
+    name: "Pawan",
+    age: 22
+}
+
+let clone = {};
+
+Object.assign(clone, user);
+//console.log(clone);   //  { name: 'Pawan', age: 22 }
+
+clone.name = "Prashant";
+
+// console.log(clone);  //===>  { name: 'Prashant', age: 22 }
+// console.log(user);   //===>  { name: 'Pawan', age: 22 }
+
