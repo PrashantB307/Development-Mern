@@ -36,3 +36,8 @@ clone.name = "Prashant";
 // console.log(clone);  //===>  { name: 'Prashant', age: 22 }
 // console.log(user);   //===>  { name: 'Pawan', age: 22 }
 
+Object.assign(clone, user, {name: "Bhardwaj"});
+console.log(clone);     //===>  { name: 'Bhardwaj', age: 22 }
+
+Object.assign(clone, user, {full_name: "Prashant Bhardwaj"});
+console.log(clone);     //===> { name: 'Pawan', age: 22, full_name: ' Prashant Bhardwaj' }
