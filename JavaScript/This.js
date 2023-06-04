@@ -58,3 +58,17 @@ function sayHi() {
 sayHi();    //====> undefined
 
 
+//***************************  Strict Mode   **************************************
+//---------------------------------------------------------------------------------
+
+// Strict Mode --> Strict mode does not allow to be used if they 
+              //   are not declared.
+
+'use strict'  
+
+function sayHi() {
+    console.log(this.name);
+}
+
+sayHi();     //====>  Error
+// ==> If we do not use strict mode then this code give output --> undefined
