@@ -49,3 +49,12 @@ admin2.f = sayHi;
 
 user2.f();     //====> Prashant
 admin2.f();    //====> Pawan
+
+
+function sayHi() {
+    console.log(this.name);
+}
+
+sayHi();    //====> undefined
+
+
