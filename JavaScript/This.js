@@ -33,3 +33,19 @@ let admin1 = user1;
 user1.sayHi();   //====> Pawan
 user1 = null;
 admin1.sayHi();  //====> Pawan
+
+
+//*******************************************************************
+
+let user2 = { name : 'Prashant'};
+let admin2 = { name : 'Pawan'} ;
+
+function sayHi() {
+    console.log(this.name);
+}
+
+user2.f = sayHi;
+admin2.f = sayHi;
+
+user2.f();     //====> Prashant
+admin2.f();    //====> Pawan
