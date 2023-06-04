@@ -72,3 +72,9 @@ function sayHi() {
 
 sayHi();     //====>  Error
 // ==> If we do not use strict mode then this code give output --> undefined
+
+//-----------------------------------------------------------------------------------
+
+x = 6;
+console.log(x);    //====>  Error
+// ===> If we do not use strict mode then this code give output --> 6
