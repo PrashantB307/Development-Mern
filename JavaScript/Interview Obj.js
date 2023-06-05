@@ -103,3 +103,19 @@ var name = "P1";
 type1();   //===>  undefined
 
 
+//========> Qu.2
+
+function type2 () {
+    console.log(this.lname);
+}
+
+var lname = "kumar";
+
+var obj1 = {
+    lname : "Bhardwaj",
+    type2
+}
+
+obj1.type2();    //===>  Bhardwaj
+
+
