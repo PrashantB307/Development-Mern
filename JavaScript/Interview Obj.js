@@ -82,3 +82,24 @@ let flattenedObj = {
     "sizes.height" : 182,
     "sizes.weight" : 50
 }
+
+
+//====================> "This" Interview types <====================
+//------------------------------------------------------------------
+
+//-------> Rules <--------
+//1. The value of this is evaluated during the run time depending on the context.
+//2.
+
+
+//========> Qu.1
+
+function type1 () {
+    console.log(this.name);
+}
+
+var name = "P1";
+
+type1();   //===>  undefined
+
+
