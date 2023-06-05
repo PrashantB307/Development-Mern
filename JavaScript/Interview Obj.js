@@ -119,3 +119,17 @@ var obj1 = {
 obj1.type2();    //===>  Bhardwaj
 
 
+//========> Qu.3
+
+var food = "Pizza";
+
+var obj2 = {
+    food : "Pasta",
+    eat () {
+        console.log("I am eating " + this.food);
+    }
+}
+
+var foo = obj2.eat;
+
+foo();     //===> I am eating Pizza
