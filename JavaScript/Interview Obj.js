@@ -84,12 +84,12 @@ let flattenedObj = {
 }
 
 
-//====================> "This" Interview types <====================
-//------------------------------------------------------------------
+// ====================> "This" Interview types <====================
+// ------------------------------------------------------------------
 
-//-------> Rules <--------
-//1. The value of this is evaluated during the run time depending on the context.
-//2.
+// -------> Rules <--------
+// 1. The value of this is evaluated during the run time depending on the context.
+// 2.
 
 
 //========> Qu.1
@@ -100,7 +100,7 @@ function type1 () {
 
 var name = "P1";
 
-type1();   //===>  undefined
+type1();   //===>  P1
 
 
 //========> Qu.2
