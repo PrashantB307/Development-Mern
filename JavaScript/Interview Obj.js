@@ -133,3 +133,21 @@ var obj2 = {
 var foo = obj2.eat;
 
 foo();     //===> I am eating Pizza
+
+
+//========> Qu.4
+
+var length = 1;
+function square () {
+    let cb = function () {
+        console.log(this.length * this.length);
+    }
+    setTimeout(cb, 2000);
+}
+
+var obj3 = {
+    length : 3,
+    square
+};
+
+obj3.square();   //===> 1
