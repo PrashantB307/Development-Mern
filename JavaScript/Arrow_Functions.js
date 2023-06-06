@@ -25,3 +25,11 @@ let double = n => n * 2;
 console.log( double(8) );    //=====>  16
 
 
+// *************************************************************************
+
+
+// If there are no arguments, parentheses are empty, but they must be present:
+
+let sayHi = () => console.log("Hello!");
+
+sayHi();   //=====> Hello!
