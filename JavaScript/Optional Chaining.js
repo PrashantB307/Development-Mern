@@ -22,3 +22,22 @@ console.log( user1 ?. address ?. street);
 // undefined insted of Error . 
 
 
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+//===========================>    " ?.( ) "     <=============================
+//----------------------------------------------------------------------------
+
+//  " ?.( ) "  ==> is used to call a function that may not exits.
+
+let userAdmin = {
+    admin () {
+        console.log(" I am admin ");
+    }
+};
+
+let userGuest = {};
+
+userAdmin.admin ?. ();   // ====>  I am admin 
+
+userGuest.admin ?. ();   //====> nothig happen (no such method)
