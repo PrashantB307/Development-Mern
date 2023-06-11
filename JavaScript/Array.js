@@ -33,3 +33,16 @@ for (let i = 0; i < arr.length; i++) {
 // =====> Apple Orange Pear
 
 
+//===========>  for - of  Loop  
+//----------------------------
+
+let fruits = ["Apple", "Orange", "Plum"];
+
+// iterates over array elements
+for (let fruit of fruits) {
+  console.log( fruit );
+}
+
+// =====> Apple Orange Pear
+
+
