@@ -58,4 +58,19 @@ for (let key in arr1) {
 // =====> Apple Orange Pear
 
 
+//=====================>    Methods   <=======================
+//------------------------------------------------------------
+
+//===========>  Push 
+//--------------------
+
+// Append the element to the end of the array:
+
+let fruits1 = ["Apple", "Orange"];
+
+fruits1.push("Pear");
+
+console.log( fruits1 ); // =====> [ 'Apple', 'Orange', 'Pear' ]
+
+
 
