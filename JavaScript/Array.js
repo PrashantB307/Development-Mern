@@ -19,3 +19,17 @@ arr2d[2][2]="pawan";
 console.table(arr2d);
 
 console.log(arr2d.length);
+
+
+// =======================>    Loops    <=========================
+// ---------------------------------------------------------------
+
+let arr = ["Apple", "Orange", "Pear"];
+
+for (let i = 0; i < arr.length; i++) {
+  console.log( arr[i] );
+}
+
+// =====> Apple Orange Pear
+
+
