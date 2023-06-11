@@ -73,4 +73,16 @@ fruits1.push("Pear");
 console.log( fruits1 ); // =====> [ 'Apple', 'Orange', 'Pear' ]
 
 
+//===========>  Pop 
+//------------------
+
+// Extracts the last element of the array and returns it:
+
+let fruits2 = ["Apple", "Orange", "Pear"];
+
+console.log( fruits2.pop() ); // remove "Pear" and alert it
+
+console.log( fruits2 );  // ====> [ 'Apple', 'Orange' ]
+
+
 
