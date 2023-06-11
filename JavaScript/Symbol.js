@@ -3,7 +3,7 @@
 //=============================>   Symbols   <==============================
 //--------------------------------------------------------------------------
 
-// A "Symbol" is a Primitive unique vale.
+// A "Symbol" is a Primitive unique value.
 // A "Symbol" represents a uniqe identifier .
 // A value of this type can be created using "Symbol()" .
 
