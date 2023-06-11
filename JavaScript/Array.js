@@ -46,3 +46,16 @@ for (let fruit of fruits) {
 // =====> Apple Orange Pear
 
 
+//===========>  for - in  Loop  
+//----------------------------
+
+let arr1 = ["Apple", "Orange", "Pear"];
+
+for (let key in arr1) {
+  console.log( arr1[key] ); 
+}
+
+// =====> Apple Orange Pear
+
+
+
