@@ -84,3 +84,28 @@ console.log( fruits2.pop() ); // remove "Pear" and alert it
 
 console.log( fruits2 );  // ====> [ 'Apple', 'Orange' ]
 
+
+//===========>  Shift
+//--------------------
+
+// Extracts the first element of the array and returns it:
+
+let fruits3 = ["Apple", "Orange", "Pear"];
+
+console.log( fruits3.shift() ); // remove Apple and console it
+
+console.log( fruits3 ); // ====> [ 'Orange', 'Pear' ]
+
+
+//===========>  unshift
+//----------------------
+
+// Add the element to the beginning of the array:
+
+let fruits4 = ["Orange", "Pear"];
+
+fruits4.unshift('Apple');
+
+console.log( fruits4 ); // [ 'Apple', 'Orange', 'Pear' ]
+
+
