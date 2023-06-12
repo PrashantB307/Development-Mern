@@ -109,3 +109,44 @@ fruits4.unshift('Apple');
 console.log( fruits4 ); // [ 'Apple', 'Orange', 'Pear' ]
 
 
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+let fruit = ["apple", "pear"];
+fruit[5] = "banana";
+
+console.log(fruit[3]);  // ====> undefined
+
+fruit.age = 34;
+console.log(fruit.length);  // ====> 6
+
+fruit[7] = "free";
+console.log(fruit.length);  // ====> 8 
+
+fruit.year = "2023";
+console.log(fruit.length);  // ====> 8
+
+fruit.month = "June";
+fruit[2] = "grapes";
+         
+fruit.abc = "xyz";
+
+fruit.length = 4;
+console.log(fruit.length);  // ====> 4
+console.log(fruit);
+
+// undefined
+// 6
+// 8
+// 8
+// 4
+// [
+//   'apple',
+//   'pear',
+//   'grapes',
+//   <1 empty item>,
+//   age: 34,
+//   year: '2023',
+//   month: 'June',
+//   abc: 'xyz'
+// ]
