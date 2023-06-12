@@ -84,5 +84,3 @@ console.log( fruits2.pop() ); // remove "Pear" and alert it
 
 console.log( fruits2 );  // ====> [ 'Apple', 'Orange' ]
 
-
-

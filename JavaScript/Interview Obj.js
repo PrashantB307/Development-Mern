@@ -151,3 +151,29 @@ var obj3 = {
 };
 
 obj3.square();   //===> 1
+
+
+//========> Qu.5
+
+// Swap 2 numbers without using temp variables :-
+
+let num1 = 10;
+let num2 = 20;
+
+[num1, num2] = [num2, num1];
+
+console.log( "num1 = " + num1 );   // ===> num1 = 20
+console.log( "num2 = " + num2 );   // ===> num2 = 10
+ 
+
+// =======> Another way ( only for numbers ) ------>
+
+let n1 = 10;
+let n2 = 20;
+ 
+n1 = n1 + n2;
+n2 = n1 - n2;
+n1 = n1 - n2;
+
+console.log( "n1 = " + n1 );   // ===> n1 = 20
+console.log( "n2 = " + n2 );   // ===> n2 = 10
