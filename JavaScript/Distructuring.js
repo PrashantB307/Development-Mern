@@ -75,3 +75,30 @@ console.log(rest.width);   // ===> 100
 
 
 
+//====================>   Nested destructuring   <====================
+//--------------------------------------------------------------------
+
+let option = {
+  size: {
+    width1: 100,
+    height1: 200
+  },
+  items: ["Cake", "Donut"],
+  extra: true
+};
+
+// destructuring assignment split in multiple lines for clarity
+let {
+  size: { // put size here
+    width1,
+    height1
+  },
+  items: [item1, item2], // assign items here
+  title1 = "Menu" // default value is used
+} = option;
+
+console.log(title1);  // ===> Menu
+console.log(width1);  // ===> 100
+console.log(height1); // ===> 200
+console.log(item1);   // ===> Cake
+console.log(item2);   // ===> Donut
