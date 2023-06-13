@@ -25,3 +25,13 @@ console.log(mom);   //=====> mummy
 console.log(dad);   //=====> papa
 
 
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+let [fName, lname] = "Prashant Bhardwaj".split(' ');
+console.log(fName);    //=====> Prashant
+console.log(lname);    //=====> Bhardwaj
+
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
