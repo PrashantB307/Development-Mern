@@ -52,3 +52,26 @@ for(let [key, value] of Object.entries(user)){
 } 
 
 
+//====================>   Object destructuring   <====================
+//--------------------------------------------------------------------
+
+let options = {
+  title: "Menu",
+  width: 100,
+  height: 200
+};
+
+let {title, width, height} = options;
+
+console.log(title);  // ===> Menu
+console.log(width);  // ===> 100
+console.log(height); // ===> 200
+
+let {titles, ...rest} = options;
+
+// now titles="Menu", rest={height: 200, width: 100}
+console.log(rest.height);  // ===> 200
+console.log(rest.width);   // ===> 100
+
+
+
