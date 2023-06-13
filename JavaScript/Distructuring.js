@@ -35,3 +35,20 @@ console.log(lname);    //=====> Bhardwaj
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+// =====> Looping with .entries()
+// -------------------------------
+
+// We can use it with destructuring to loop over keys-and-values of an object:
+
+let user = {
+  name : "John",
+  age : 28
+};
+
+// loop over keys and values..
+for(let [key, value] of Object.entries(user)){
+  console.log(key);    // ===> name : John
+  console.log(value);  // ===> age : 28
+} 
+
+
