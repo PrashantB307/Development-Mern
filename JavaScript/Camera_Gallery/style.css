@@ -41,3 +41,17 @@ video {
 
 }
 
+.record-btn {
+    background-color: red;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.capture-btn  {
+    background-color: white;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+}
+
