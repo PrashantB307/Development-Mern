@@ -88,3 +88,36 @@ video {
     background-position: center;
     background-blend-mode: color-burn;
 }
+
+.orange {
+    background-color: #ffa50052;
+}
+
+.brown {
+    background-color: #a52a2a59;
+}
+
+.pink {
+    background-color: #ffc0cb57;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.filter-layer {
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    /* background-color: #ffc0cb57; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.scale-capture {
+    animation-name: scale-capture;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+}
+
