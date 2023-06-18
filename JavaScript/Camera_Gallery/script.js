@@ -103,3 +103,22 @@ captureBtnCont.addEventListener("click", () => {
     }, 510);
 });
 
+recordBtnCont.addEventListener("click" , () => {
+
+    shouldRecord = !shouldRecord;
+    if(shouldRecord) {
+        recordBtn.classList.add("scale-record");
+        // Recording Strat
+        recorder.start();
+        // Start timer
+        startTimer();
+    }
+    else {
+        recordBtn.classList.remove("scale-record");
+        // Stop the recording
+        recorder.stop();
+        // Stop the timer
+        stopTimer();
+    }
+});
+
