@@ -65,3 +65,15 @@ navigator.mediaDevices.getUserMedia(constraints)
     });
 });
 
+// Click Photo
+captureBtnCont.addEventListener("click", () => {
+    captureBtn.classList.add("scale-capture");
+    let canvas = document.createElement("canvas");
+
+    let tool = canvas.getContext("2d");
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    tool.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+   
