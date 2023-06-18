@@ -1,3 +1,9 @@
+let gallery = document.querySelector(".gallery");
+gallery.addEventListener("click", () => {
+    location.assign("./gallery.html");
+});
+
+var uid = new ShortUniqueId();
 let video = document.querySelector("video");
 let captureBtnCont = document.querySelector(".capture-btn-cont");
 let captureBtn = document.querySelector(".capture-btn"); 
@@ -19,9 +25,10 @@ navigator.mediaDevices.getUserMedia(constraints)
     video.srcObject = stream;
 
     recorder = new MediaRecorder(stream);
-    recorder.addEventListener("start" , () => {
+    recorder.addEventListener("start" , (e) => {
         // Memory
         chunks = [];
         console.log("rec start");
-    })
+    });
 
+    
