@@ -40,4 +40,38 @@ setTimeout(() => {
         });
     };
     
+    let videoDBTransaction = db.transaction("video", "readonly");
+    let videoStore = videoDBTransaction.objectStore("video");
+    let videoRequest = videoStore.getAll();
     
+    videoRequest.onsuccess = () => {
+        
+        let videoResult = videoRequest.result;
+        let galleryCont = document.querySelector(".gallery-cont");
+    
+        videoResult.forEach((videoObj) => {
+            let videoElem = document.createElement("div");
+            videoElem.setAttribute("class", "media-cont");
+            videoElem.setAttribute("id", videoObj.id);
+            let url = URL.createObjectURL(videoObj.blobData);
+    
+            videoElem.innerHTML = `
+            <div class="media">
+                <video autoplay loop src ="${url}"/></video>
+            </div>
+            <div class = "delete action-btn">DELETE</div>
+            <div class = "download action-btn">DOWNLOAD</div>
+            `;
+    
+            galleryCont.appendChild(videoElem);
+
+            let deleteBtn = videoElem.querySelector(".delete");
+            deleteBtn.addEventListener("click", deleteListner);
+
+            let downloadBtn = videoElem.querySelector(".download");
+            downloadBtn.addEventListener("click", downloadListner);
+        });
+    };
+    }
+}, 100);
+
