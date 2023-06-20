@@ -98,3 +98,37 @@ function deleteListner(e) {
 
 }
 
+function downloadListner(e) {
+    let id = e.target.parentElement.getAttribute("id");
+    let type = id.split("-")[0];
+    if(type == 'vid') {
+        let videoDBTransaction = db.transaction("video", "readonly");
+        let videoStore = videoDBTransaction.objectStore("video");
+        let videoRequest = videoStore.get(id);
+        videoRequest.onsuccess = () => {
+            let videoResult = videoRequest.result;
+            let url = URL.createObjectURL(videoResult.blobData);
+
+            let a = document.createElement("a");
+            a.href = url;
+            a.download = "video.mp4";
+            a.click();
+
+        } 
+    }
+
+    if(type == 'img') {
+        let imageDBTransaction = db.transaction("image", "readonly");
+        let imageStore = imageDBTransaction.objectStore("image");
+        let imageRequest = imageStore.get(id);
+        imageRequest.onsuccess = () => {
+            let imageResult = imageRequest.result;
+            let imageURL = imageResult.url;
+
+            let a = document.createElement("a");
+            a.href = imageURL;
+            a.download = "pic.png";
+            a.click();
+        };
+    }
+}
