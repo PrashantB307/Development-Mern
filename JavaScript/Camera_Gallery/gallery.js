@@ -75,3 +75,26 @@ setTimeout(() => {
     }
 }, 100);
 
+function deleteListner(e) {
+    console.log("hello");
+    let id = e.target.parentElement.getAttribute("id");
+    let type = id.split("-")[0];
+    console.log(type);
+    if(type == "vid") {
+        // Remove from database
+        let videoDBTransaction = db.transaction("video", "readwrite");
+        let videoStore = videoDBTransaction.objectStore("video");
+        videoStore.delete(id);
+
+    }
+    else if(type == "img"){
+        // Remove from database
+        let imageDBTransaction = db.transaction("image", "readwrite");
+        let imageStore = imageDBTransaction.objectStore("image");
+        imageStore.delete(id);
+    }
+     // Remove from ui
+    e.target.parentElement.remove();
+
+}
+
