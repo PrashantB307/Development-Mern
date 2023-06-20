@@ -2,3 +2,8 @@
 package-lock.json
 package.json
 secrets.js
+node_modules
+public
+src
+.gitignore
+README.md

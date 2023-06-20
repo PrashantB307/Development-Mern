@@ -57,3 +57,22 @@ h1 {
     object-fit: fill;
 }
 
+.action-btn {
+    height: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-btn:hover {
+    cursor: pointer;
+}
+
+.download {
+    background-color: black;
+}
+
+.delete {
+    background-color: red;
+}

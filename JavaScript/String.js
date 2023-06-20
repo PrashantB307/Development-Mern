@@ -81,3 +81,13 @@ console.log(a);
 //       'r', 'a', 's', 'h', 'a', 'n',
 //       't'
 //  ]
+
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+export const key = "PRA- 988983";
+export var exportedObj = {
+     name : "Pawan",
+     age : 22
+}
