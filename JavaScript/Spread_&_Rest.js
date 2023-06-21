@@ -22,3 +22,18 @@ const nObj = {...oObj, age: 32};
 console.log(nObj);    // =====> { name: 'pawan', age: 32 }
 
 
+//=====================>  Rest Operator <=====================
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// It is used to Merge a list of functions arguments into an array.
+
+
+function fun (...args) {
+    console.log(args);   // =====>  [ 'Hello', 'How', 2, true ]
+    console.log(typeof args);   // =====> object
+    args.forEach(arg => {
+        console.log(arg);   // =====>  Hello How 2 true
+    });
+};
+
+fun("Hello", "How", 2, true);
