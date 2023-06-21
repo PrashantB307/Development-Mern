@@ -177,3 +177,16 @@ n1 = n1 - n2;
 
 console.log( "n1 = " + n1 );   // ===> n1 = 20
 console.log( "n2 = " + n2 );   // ===> n2 = 10
+
+
+//========> Qu.6
+
+// Sort the array using setTimeout() :-
+
+const ar = [10, 20, 1, 5, 8, 50, 100];
+for(let num of ar) {
+    setTimeout( () => {
+        console.log(num);
+    }, num);
+};
+// =====> 1 5 8 10 20 50 100
