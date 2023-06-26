@@ -22,3 +22,18 @@ console.log(arr);  //----> [ 1, 4, 9, 16 ]
 // Function which returns a func. is called HOF.
 
 
+// function calculator is a HOF
+function calculater (operator, a, b) {
+    if(operator == "+"){
+        return function add() {
+            return a + b;
+        };
+    }
+}
+
+console.log("Hello");      // ====> Hello
+let fn =  calculater("+", 3, 4);
+let ans = fn();
+console.log(ans);       // ====> 7
+
+
