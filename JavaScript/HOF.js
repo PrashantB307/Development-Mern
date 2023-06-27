@@ -56,3 +56,18 @@ console.log(areaOfSquare(arr1));
 // ====> [ 4, 16, 36, 64, 49, 81 ]
 
 
+// Calculate the Perimeter of Squares
+
+let periOfSquare = function (arr1) {
+    let res = [];
+    for(let i = 0; i < arr1.length; i++){
+        res.push(4 * arr1[i]);
+    }
+
+    return res;
+}
+
+console.log(periOfSquare(arr1));
+// ====>  [ 8, 16, 24, 32, 28, 36 ]
+
+
