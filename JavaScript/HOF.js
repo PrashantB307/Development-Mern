@@ -97,3 +97,18 @@ console.log(calculate(arr2, area));    // ====> [ 4, 16, 36, 64, 49, 81 ]
 console.log(calculate(arr2, perimeter));   // ====>  [ 8, 16, 24, 32, 28, 36 ]
 
 
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+//   Map  ======>
+//---------------
+
+let arr3 = [2, 3, 4, 5, 6, 8, 7, 9];
+
+let res = arr3.map( (a) => {
+    return a * a;
+});
+
+console.log(res);   // ====> [ 4, 9, 16, 25, 36, 64, 49, 81 ]
+
+
