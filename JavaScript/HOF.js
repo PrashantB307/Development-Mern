@@ -71,3 +71,29 @@ console.log(periOfSquare(arr1));
 // ====>  [ 8, 16, 24, 32, 28, 36 ]
 
 
+// Better Way =======>
+// -------------------
+
+const arr2 = [2, 4, 6, 8, 7, 9];
+
+let area = function (a) {
+    return a * a;
+}
+
+let perimeter = function (a) {
+    return 4 * a;
+}
+
+let calculate = function (arr, logic) {
+    let res = [];
+    for(let i = 0; i < arr2.length; i++){
+        res.push(logic(arr2[i]));
+    }
+
+    return res;
+}
+
+console.log(calculate(arr2, area));    // ====> [ 4, 16, 36, 64, 49, 81 ]
+console.log(calculate(arr2, perimeter));   // ====>  [ 8, 16, 24, 32, 28, 36 ]
+
+
