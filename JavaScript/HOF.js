@@ -112,3 +112,15 @@ let res = arr3.map( (a) => {
 console.log(res);   // ====> [ 4, 9, 16, 25, 36, 64, 49, 81 ]
 
 
+//   Filter  ======>
+//------------------
+
+// Return only Even No.
+
+let evenNo = arr3.filter( (a) => {
+    return (a % 2 == 0);
+});
+
+console.log(evenNo);   // ======> [ 2, 4, 6, 8 ]
+
+
