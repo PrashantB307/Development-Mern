@@ -124,3 +124,10 @@ let evenNo = arr3.filter( (a) => {
 console.log(evenNo);   // ======> [ 2, 4, 6, 8 ]
 
 
+//   Reduce  ======> ( Return the sum of the array)
+//-------------------------------------------------
+
+let sumofArr = arr3.reduce( (acc, num) => {
+    return acc + num;
+});
+
