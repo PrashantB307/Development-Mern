@@ -139,3 +139,6 @@ let sumofArr1 = arr3.reduce( (acc, num) => {
     return acc + num;
 }, 5);
 
+console.log(sumofArr1);   // ======>  49
+// ( Here acc = 5 and num = arr[0] )
+
