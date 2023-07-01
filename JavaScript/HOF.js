@@ -131,3 +131,7 @@ let sumofArr = arr3.reduce( (acc, num) => {
     return acc + num;
 });
 
+console.log(sumofArr);   // ======>  44
+// ( By defaut the initial value of accumalator = arr[0] and num = arr[1] )
+
+
