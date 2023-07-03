@@ -142,3 +142,20 @@ let sumofArr1 = arr3.reduce( (acc, num) => {
 console.log(sumofArr1);   // ======>  49
 // ( Here acc = 5 and num = arr[0] )
 
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// Write a code to calculate largest element in array :-
+// ------------------------------------------------------
+
+const arr4 = [-2, -5, 8, 7, -23];
+
+function largestElem(max, curr){
+    if(curr > max){
+        max = curr;
+    }
+    return max;
+};
+
+var ans1 = arr4.reduce(largestElem, -Infinity);
+console.log(ans1);   // ====> 8
+
