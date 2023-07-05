@@ -167,3 +167,13 @@ var users = [
     {firstName: "Shivam", lastname: "Sharma", age: 15}
 ];
 
+// *   Write a code to get fullname or all users.
+//-----------------------------------------------
+
+let fullName = users.map( (obj) => {
+    return obj.firstName+" "+obj.lastname;
+}); 
+
+console.log(fullName);
+// ====> [ 'Pawan Kumar', 'Santosh Gupta', 'Shivam Sharma' ]
+
