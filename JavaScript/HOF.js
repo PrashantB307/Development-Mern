@@ -191,3 +191,7 @@ function usersAge(robj, cobj){
     return robj;
 }
 
+var obj = users.reduce(usersAge, {});
+console.log(obj);
+// ====> { '15': 1, '22': 1, '55': 1 }
+
