@@ -195,3 +195,13 @@ var obj = users.reduce(usersAge, {});
 console.log(obj);
 // ====> { '15': 1, '22': 1, '55': 1 }
 
+// ***  Write a code to get firstname of all user with age less than 30.
+//----------------------------------------------------------------------
+
+var fname = users.filter( (obj) => obj.age <= 30 );
+var fname = fname.map((obj) => {
+    return obj.firstName;
+});
+
+console.log(fname);
+// ====> [ 'Pawan', 'Shivam' ]
