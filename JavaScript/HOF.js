@@ -159,3 +159,11 @@ function largestElem(max, curr){
 var ans1 = arr4.reduce(largestElem, -Infinity);
 console.log(ans1);   // ====> 8
 
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+var users = [ 
+    {firstName: "Pawan", lastname: "Kumar", age: 22},
+    {firstName: "Santosh", lastname: "Gupta", age: 55},
+    {firstName: "Shivam", lastname: "Sharma", age: 15}
+];
+
