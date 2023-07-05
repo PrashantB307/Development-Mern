@@ -177,3 +177,6 @@ let fullName = users.map( (obj) => {
 console.log(fullName);
 // ====> [ 'Pawan Kumar', 'Santosh Gupta', 'Shivam Sharma' ]
 
+// **  Write a code to return the no.of users with particular age.
+//----------------------------------------------------------------
+
