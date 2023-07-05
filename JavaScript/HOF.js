@@ -180,3 +180,14 @@ console.log(fullName);
 // **  Write a code to return the no.of users with particular age.
 //----------------------------------------------------------------
 
+function usersAge(robj, cobj){
+    let age = cobj.age;
+    if(robj[age]) {
+        robj[age] = robj[age] + 1;
+    }else{
+        robj[age] = 1;
+    }
+
+    return robj;
+}
+
