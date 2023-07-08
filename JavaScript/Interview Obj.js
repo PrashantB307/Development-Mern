@@ -199,3 +199,15 @@ for(let num of ar) {
 // Lucky Seven ==> If Sum of 3 consicutive index are 7 print true 
 //                 else print false
 
+const ab = [2, 3 ,1, 3, 2, 2];
+let i = 0, j = 1, k = 2;
+while(k < ab.length){
+    if((ab[i] + ab[j] + ab[k]) == 7){
+        console.log(true);
+        break;
+    }else{
+        console.log(false);
+        break;
+    }
+    i++,j++,k++;
+}
