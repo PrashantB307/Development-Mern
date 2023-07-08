@@ -190,3 +190,12 @@ for(let num of ar) {
     }, num);
 };
 // =====> 1 5 8 10 20 50 100
+
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+//---> Qu. 1 ;
+
+// Lucky Seven ==> If Sum of 3 consicutive index are 7 print true 
+//                 else print false
+
