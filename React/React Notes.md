@@ -17,4 +17,11 @@ Hooks do not work in Class Componenets.
 
 
 
- 
+ State   ==>  Use State
+LCM (Life Cycle Method) ==> Use Effect
+
+(By using 'functinal components' we do not need to use ===>
+class , constructor , super(), arrow function , this keyword etc. )
+
+
+
