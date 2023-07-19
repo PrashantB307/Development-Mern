@@ -5,4 +5,9 @@ secrets.js
 node_modules
 .gitignore
 README.md
-React
+movies
+reduxdemo
+reels
+todo
+Interview Que.js
+hooks
