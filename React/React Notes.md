@@ -25,3 +25,27 @@ class , constructor , super(), arrow function , this keyword etc. )
 
 
 
+Context API ===>
+================
+
+Contex API provides a way to pass data through component tree
+without  havig to pass props down manually at each level.
+
+
+* FireBase ====>
+================
+
+It is developed by Google for developing mobile applications.
+All the backend codes are written  already in FireBase.
+
+
+* Redux Cycle =====>
+====================
+
+Reducer <------- Dispatch(action)
+   |                   ^
+   |                   |
+   |                   | 
+   |                   |
+   V                   |
+ Store  ---------> Components
