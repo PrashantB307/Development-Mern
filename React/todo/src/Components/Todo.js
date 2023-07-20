@@ -27,5 +27,15 @@ export default class Todo extends Component {
     })
   }
 
+  handleDeleteTasks = (id) => {
+    let narr = this.state.tasks.filter( (taskObj) => {
+      return taskObj.id !== id
+    });
+    this.setState({
+      tasks: [...narr]
+    });
+  }
+
+
   
 }
