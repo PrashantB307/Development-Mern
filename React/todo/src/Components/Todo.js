@@ -14,5 +14,18 @@ export default class Todo extends Component {
     };
   }
 
+  handleChange = (e) => {
+    console.log(e.target.value);
+    this.setState({
+      curTask: e.target.value
+    });
+  };
+
+  handleSubmit = () => {
+    this.setState ({
+      tasks:[...this.state.tasks, {task: this.state.curTask, id: this.state.tasks.length + 1}]
+    })
+  }
+
   
 }
