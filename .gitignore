@@ -5,10 +5,9 @@ secrets.js
 node_modules
 .gitignore
 README.md
-movies
 reduxdemo
 reels
-todo
 Interview Que.js
 hooks
 ShoopingCartUI
+movies
