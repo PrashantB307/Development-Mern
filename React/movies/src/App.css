@@ -37,3 +37,13 @@
   }
 }
 
+.banner-card {
+  background-color: white;
+  width: 100vw;
+}
+
+.banner-img {
+  height: 80vh;
+  width: 100%;
+}
+
