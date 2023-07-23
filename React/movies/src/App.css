@@ -76,3 +76,17 @@
   justify-content: center;
 }
 
+.movie-card {
+  width: 20vw;
+  margin: 1rem;
+  color: white;
+  position: relative;
+
+}
+
+.movie-title {
+  position:absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
