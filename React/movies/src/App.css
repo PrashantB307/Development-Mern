@@ -90,3 +90,14 @@
   top: 1rem;
 }
 
+.movie-button {
+  position: absolute;
+  top: 80%;
+
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
