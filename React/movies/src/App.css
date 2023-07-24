@@ -114,3 +114,16 @@
   padding: 3rem;
 }
 
+@media screen and (max-width: 400px) {
+
+  .banner-card{
+    height: 25vh;
+  }
+
+  .banner-img {
+    height: 30vh;
+  }
+
+  
+  
+}
