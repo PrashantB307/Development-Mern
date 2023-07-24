@@ -101,3 +101,12 @@
   justify-content: center;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.favourites-list{
+  padding: 3rem;
+}
+
