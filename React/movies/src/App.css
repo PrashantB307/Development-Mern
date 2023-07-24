@@ -124,6 +124,23 @@
     height: 30vh;
   }
 
+  .banner-title {
+    top: 10vh;
+    left: 5vw;
+  }
+
+  .banner-text {
+    top: 15vh;
+    left: 5vw;
+  }
+
+  .movies-list{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: center;
+  }
+
   
   
 }
