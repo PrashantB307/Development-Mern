@@ -40,5 +40,19 @@ export default class List extends Component {
     });
   };
 
+  handleNext = () => {
+    let tempArr = [];
+    for (let i = 1; i <= this.state.parr.length + 1; i++) {
+      tempArr.push(i);
+    }
+    this.setState(
+      {
+        parr: [...tempArr],
+        currPage: this.state.currPage + 1,
+      },
+      this.changeMovies
+    );
+  };
+
   
 }
