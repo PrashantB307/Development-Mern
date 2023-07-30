@@ -16,5 +16,17 @@ export default class List extends Component {
     };
   }
 
+  handleEnter = (id) => {
+    this.setState({
+      hover: id,
+    });
+  };
+
+  handleLeave = () => {
+    this.setState({
+      hover: "",
+    });
+  };
+
   
 }
