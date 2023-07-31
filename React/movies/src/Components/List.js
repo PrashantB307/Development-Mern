@@ -93,5 +93,14 @@ export default class List extends Component {
     });
   };
 
+  async componentDidMount() {
+    let ans = await axios.get(
+      `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=${this.state.currPage}`
+    );
+    this.setState({
+      movies: [...ans.data.results],
+    });
+  }
+
   
 }
