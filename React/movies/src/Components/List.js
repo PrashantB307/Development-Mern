@@ -54,5 +54,24 @@ export default class List extends Component {
     );
   };
 
-  
+  handlePrev = () => {
+    if (this.state.currPage !== 1) {
+      this.setState(
+        {
+          currPage: this.state.currPage - 1,
+        },
+        this.changeMovies
+      );
+    }
+  };
+
+  handlePageNo = (pageNum) => {
+    this.setState(
+      {
+        currPage: pageNum,
+      },
+      this.changeMovies
+    );
+  };
+
 }
