@@ -115,7 +115,13 @@ export default class List extends Component {
               <strong style={{color: "red"}}>Trending Movies</strong>
             </h3>
             <div className="movies-list">
-              
+            {this.state.movies.map((movieObj) => (
+                <div
+                  className="card movie-card"
+                  onMouseEnter={() => this.handleEnter(movieObj.id)}
+                  onMouseLeave={this.handleLeave}
+                >
+
           </div>
         )}
       </>
