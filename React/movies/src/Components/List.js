@@ -110,7 +110,12 @@ export default class List extends Component {
             <span className="visually-hidden">Loading...</span>
           </div>
         ) : (
-          
+          <div>
+            <h3 className="text-center trending">
+              <strong style={{color: "red"}}>Trending Movies</strong>
+            </h3>
+            <div className="movies-list">
+              
           </div>
         )}
       </>
