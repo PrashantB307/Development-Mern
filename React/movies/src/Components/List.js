@@ -127,7 +127,16 @@ export default class List extends Component {
                     alt="..."
                     style={{ height: "40vh" }}
                   />
-                  
+                  <h5 className="card-title movie-title">
+                    {movieObj.original_title}
+                  </h5>
+                  <div className="button-wrapper">
+                    {this.state.hover === movieObj.id && (
+                      <button
+                        className="btn btn-primary movie-button"
+                        onClick={() => this.handleFavourites(movieObj)}
+                      >
+                        
           </div>
         )}
       </>
