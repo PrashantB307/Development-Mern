@@ -136,7 +136,15 @@ export default class List extends Component {
                         className="btn btn-primary movie-button"
                         onClick={() => this.handleFavourites(movieObj)}
                       >
-                        
+                     {this.state.favMov.includes(movieObj.id) ?
+                         " Remove From Favourites " : " Add to Favourites "}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+             
           </div>
         )}
       </>
