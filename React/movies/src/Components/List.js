@@ -121,7 +121,13 @@ export default class List extends Component {
                   onMouseEnter={() => this.handleEnter(movieObj.id)}
                   onMouseLeave={this.handleLeave}
                 >
-
+                <img
+                    src={`https://image.tmdb.org/t/p/original${movieObj.backdrop_path}`}
+                    className="card-img-top banner-img"
+                    alt="..."
+                    style={{ height: "40vh" }}
+                  />
+                  
           </div>
         )}
       </>
