@@ -164,7 +164,11 @@ export default class List extends Component {
                       </button>
                     </li>
                   ))}
-                  
+                  <li className="page-item">
+                    <button className="page-link" onClick={this.handleNext}>
+                      Next
+                    </button>
+                  </li>
                 </ul>
               </nav>
             </div>  
