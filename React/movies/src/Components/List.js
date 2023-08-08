@@ -144,7 +144,18 @@ export default class List extends Component {
                 </div>
               ))}
             </div>
-             
+            <div className="pagination">
+              <nav aria-label="Page navigation example">
+                <ul className="pagination">
+                  <li className="page-item">
+                    <button className="page-link" onClick={this.handlePrev}>
+                      Previous
+                    </button>
+                  </li>
+                  
+                </ul>
+              </nav>
+            </div>  
           </div>
         )}
       </>
