@@ -152,6 +152,18 @@ export default class List extends Component {
                       Previous
                     </button>
                   </li>
+                  {this.state.parr.map((pageNum) => (
+                    <li className="page-item">
+                      <button
+                        className="page-link"
+                        onClick={() => {
+                          this.handlePageNo(pageNum);
+                        }}
+                      >
+                        {pageNum}
+                      </button>
+                    </li>
+                  ))}
                   
                 </ul>
               </nav>
