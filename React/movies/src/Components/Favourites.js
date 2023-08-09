@@ -155,6 +155,12 @@ export default class Favourites extends Component {
       });
     }
 
+    if (this.state.currGenre !== "All Genre") {
+      filteredMovies = filteredMovies.filter(
+        (movieObj) => genreId[movieObj.genre_ids[0]] === this.state.currGenre
+      );
+    }
+
     
   }
 }
