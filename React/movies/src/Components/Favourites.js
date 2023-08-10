@@ -161,7 +161,12 @@ export default class Favourites extends Component {
       );
     }
 
-    
+    let numOfPages = Math.ceil(filteredMovies.length / this.state.limit);
+    let pagesArr = [];
+    for (let i = 1; i <= numOfPages; i++) {
+      pagesArr.push(i); //[1,2]
+    }
+
   }
 }
 
