@@ -172,7 +172,28 @@ export default class Favourites extends Component {
     filteredMovies = filteredMovies.slice(si, ei + 1);
 
     return (
-      
+      <div class="row">
+        <div class="col-3 favourites-list">
+          <ul class="list-group">
+            {this.state.genre.map((genre) =>
+              this.state.currGenre === genre ? (
+                <li class="list-group-item active" aria-current="true">
+                  {genre}
+                </li>
+              ) : (
+                <li
+                  class="list-group-item"
+                  aria-current="true"
+                  onClick={() => this.handleCurrGenre(genre)}
+                >
+                  {genre}
+                </li>
+              )
+            )}
+          </ul>
+        </div>
+        
+      </div>
     );
   }
 }
