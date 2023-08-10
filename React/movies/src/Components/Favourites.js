@@ -171,7 +171,9 @@ export default class Favourites extends Component {
     let ei = si + this.state.limit - 1;
     filteredMovies = filteredMovies.slice(si, ei + 1);
 
-    
+    return (
+      
+    );
   }
 }
 
