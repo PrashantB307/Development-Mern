@@ -167,6 +167,11 @@ export default class Favourites extends Component {
       pagesArr.push(i); //[1,2]
     }
 
+    let si = (this.state.currPage - 1) * this.state.limit;
+    let ei = si + this.state.limit - 1;
+    filteredMovies = filteredMovies.slice(si, ei + 1);
+
+    
   }
 }
 
