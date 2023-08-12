@@ -239,7 +239,31 @@ export default class Favourites extends Component {
                   <th scope="col"></th>
                 </tr>
               </thead>
-              
+              <tbody>
+                {filteredMovies.map((movieObj) => (
+                  <tr>
+                    <th scope="row">
+                      <img
+                        src={`https://image.tmdb.org/t/p/original${movieObj.backdrop_path}`}
+                        style={{ width: "6.5rem" }}
+                        alt="..."
+                      />
+                      {movieObj.original_title}
+                    </th>
+                    <td>{genreId[movieObj.genre_ids[0]]}</td>
+                    <td>{movieObj.popularity}</td>
+                    <td>{movieObj.vote_average}</td>
+                    <td>
+                      <button
+                        class="btn btn-outline-danger"
+                        onClick={() => this.handleDelete(movieObj.id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
             </table>
           </div>
         </div>
