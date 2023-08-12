@@ -210,6 +210,35 @@ export default class Favourites extends Component {
           </div>
           <div class="row">
             <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">Genre</th>
+                  <th scope="col">
+                    <i
+                      class="fa-solid fa-caret-up"
+                      onClick={this.sortPopularityAsc}
+                    />
+                    Popularity
+                    <i
+                      class="fa-solid fa-caret-down"
+                      onClick={this.sortPopularityDesc}
+                    />
+                  </th>
+                  <th scope="col">
+                    <i
+                      class="fa-solid fa-caret-up"
+                      onClick={this.sortRatingAsc}
+                    />
+                    Rating
+                    <i
+                      class="fa-solid fa-caret-down"
+                      onClick={this.sortRatingDesc}
+                    />
+                  </th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
               
             </table>
           </div>
