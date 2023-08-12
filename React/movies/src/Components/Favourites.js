@@ -208,7 +208,11 @@ export default class Favourites extends Component {
               onChange={(e) => this.setState({ limit: e.target.value })}
             ></input>
           </div>
-          
+          <div class="row">
+            <table class="table">
+              
+            </table>
+          </div>
         </div>
         <nav aria-label="Page navigation example">
           <ul class="pagination">
