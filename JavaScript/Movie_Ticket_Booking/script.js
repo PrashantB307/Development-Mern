@@ -77,3 +77,10 @@ function populateUI() {
     }
 }
 
+// Step 6 :- Initial setup of count , total, and UI based on save data
+
+populateUI();
+
+let ticketPrice = +movieSelect.value; 
+
+updateSelectedCount();
