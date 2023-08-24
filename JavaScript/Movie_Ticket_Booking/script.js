@@ -50,3 +50,10 @@ function updateSelectedCount(){
 
 }
 
+// Step 4 :- Define function to set selected movie data in local storage
+
+function setMovieData(movieIndex, moviePrice){
+    localStorage.setItem("selectedMovieIndex", movieIndex);
+    localStorage.setItem("selectedMoviePrice", moviePrice);
+}
+
