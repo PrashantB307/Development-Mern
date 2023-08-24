@@ -57,3 +57,23 @@ function setMovieData(movieIndex, moviePrice){
     localStorage.setItem("selectedMoviePrice", moviePrice);
 }
 
+//Step 5 :- Define function to populate UI with Local Storage data
+
+function populateUI() {
+    const selectedSeats = JSON.parse(localStorage.getItem("selectedSeats"));
+
+    if(selectedSeats != null && selectedSeats.length > 0){
+        seats.forEach( (seat, index) => {
+            if(selectedSeats.indexOf(index) > -1){
+                seat.classList.add("selected");
+            }
+        });
+    }
+
+    const selectedMovieIndex = localStorage.getItem("selectedMovieIndex");
+
+    if(selectedMovieIndex != null){
+        movieSelect.selectedIndex = selectedMovieIndex;
+    }
+}
+
