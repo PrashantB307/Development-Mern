@@ -1,0 +1,4 @@
+
+
+1=>  For run -  npm run dev
+2=> browser in vs - ctrl + shift + p --> simple browser
