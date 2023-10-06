@@ -17,6 +17,30 @@ const App = () => {
 
   const { isOpen, onClose, onOpen } = useDisclouse();
 
+  useEffect(() => {
+    const getContacts = async () => {
+      try {
+        const contactReff = collection(db, "contacts");
+
+        onSnapshot(contactReff, (snapshot) => {
+          const contactLists = snapshot.docs.map((doc) => {
+            return {
+              id: doc.id,
+              ...doc.data(),
+            };
+          });
+
+          setContacts(contactLists);
+          return contactLists;
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
+    getContacts();
+  }, []);
+
   
 };
 
