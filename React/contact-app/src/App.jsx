@@ -12,3 +12,12 @@ import useDisclouse from "./hooks/useDisclouse";
 import NotFoundContact from "./components/NotFoundContact";
 
 
+const App = () => {
+  const [contacts, setContacts] = useState([]);
+
+  const { isOpen, onClose, onOpen } = useDisclouse();
+
+  
+};
+
+export default App;
