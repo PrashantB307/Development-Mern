@@ -41,6 +41,28 @@ const App = () => {
     getContacts();
   }, []);
 
+  const filterContacts = (e) => {
+    const value = e.target.value;
+
+    const contactReff = collection(db, "contacts");
+
+    onSnapshot(contactReff, (snapshot) => {
+      const contactLists = snapshot.docs.map((doc) => {
+        return {
+          id: doc.id,
+          ...doc.data(),
+        };
+      });
+
+      const filteredContacts = contactLists.filter((contact) => 
+        contact.Name.toLowerCase().includes(value.toLowerCase())
+      );
+
+      setContacts(filteredContacts);
+      return filteredContacts;
+    });
+  };
+
   
 };
 
