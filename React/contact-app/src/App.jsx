@@ -63,7 +63,13 @@ const App = () => {
     });
   };
 
-  
+  return (
+    <>
+      
+      <AddAndUpdateContact onClose={onClose} isOpen={isOpen} />
+      <ToastContainer position="bottom-center" />
+    </>
+  );
 };
 
 export default App;
