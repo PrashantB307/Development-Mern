@@ -65,7 +65,14 @@ const App = () => {
 
   return (
     <>
-      
+      <div className=" mx-auto max-w-[370px] px-4">
+        
+        <div className="mt-4 flex flex-col gap-3">
+          {contacts.length <= 0 ? (<NotFoundContact/>) :  contacts.map((contact) => (
+            <ContactCard key={contact.id} contact={contact} />
+          ))}
+        </div>
+      </div>
       <AddAndUpdateContact onClose={onClose} isOpen={isOpen} />
       <ToastContainer position="bottom-center" />
     </>
