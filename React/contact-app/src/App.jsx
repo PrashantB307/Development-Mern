@@ -67,7 +67,13 @@ const App = () => {
     <>
       <div className=" mx-auto max-w-[370px] px-4">
       <Navbar />
-        
+      <div className="flex gap-2">
+          
+          <AiFillPlusCircle
+            onClick={onOpen}
+            className="cursor-pointer text-5xl text-white "
+          />
+        </div>
         <div className="mt-4 flex flex-col gap-3">
           {contacts.length <= 0 ? (<NotFoundContact/>) :  contacts.map((contact) => (
             <ContactCard key={contact.id} contact={contact} />
