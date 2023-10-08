@@ -66,6 +66,7 @@ const App = () => {
   return (
     <>
       <div className=" mx-auto max-w-[370px] px-4">
+      <Navbar />
         
         <div className="mt-4 flex flex-col gap-3">
           {contacts.length <= 0 ? (<NotFoundContact/>) :  contacts.map((contact) => (
