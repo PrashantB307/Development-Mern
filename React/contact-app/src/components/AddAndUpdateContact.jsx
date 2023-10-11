@@ -56,7 +56,26 @@ const AddAndUpdateContact = ({ isOpen, onClose, isUpdate, contact }) => {
             isUpdate ? updateContact(values, contact.id) : addContact(values);
           }}
         >
-          
+          <Form className="flex flex-col gap-3">
+            <div className="flex flex-col gap-1">
+              <label htmlFor="Name">Name</label>
+              <Field name="Name" className="h-10 border pl-2" />
+              <div className="text-xs text-red-500">
+                <ErrorMessage name="Name" />
+              </div>
+            </div>
+            <div className="flex flex-col gap-1">
+              <label htmlFor="Mobile_No">Mobile No </label>
+              <Field type="text" name="Mobile_No" className="h-10 border pl-2" />
+              <div className="text-xs text-red-500">
+                <ErrorMessage name="Mobile_No" />
+              </div>
+            </div>
+
+            <button className=" self-end border bg-orange px-3 py-1.5">
+              {isUpdate ? "Update" : "Add"} Contact
+            </button>
+          </Form>
         </Formik>
       </Modal>
     </div>
