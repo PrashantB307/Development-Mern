@@ -35,7 +35,32 @@ const AddAndUpdateContact = ({ isOpen, onClose, isUpdate, contact }) => {
     }
   };
 
-  
+  return (
+    <div>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <Formik
+          validationSchema={contactSchemaValidation}
+          initialValues={
+            isUpdate
+              ? {
+                  Name: contact.Name,
+                  Mobile_No: contact.Mobile_No,
+                }
+              : {
+                  Name: "",
+                  Mobile_No: "",
+                }
+          }
+          onSubmit={(values) => {
+            console.log(values);
+            isUpdate ? updateContact(values, contact.id) : addContact(values);
+          }}
+        >
+          
+        </Formik>
+      </Modal>
+    </div>
+  );
 };
 
 export default AddAndUpdateContact;
