@@ -20,7 +20,18 @@ const ContactCard = ({ contact }) => {
     }
   };
 
-  
+  return (
+    <>
+      <div
+        key={contact.id}
+        className="flex items-center justify-between rounded-lg bg-yellow p-2"
+      >
+        
+      </div>
+
+      <AddAndUpdateContact contact = {contact} isUpdate isOpen={isOpen} onClose={onClose} />
+    </>
+  );
 };
 
 export default ContactCard;
