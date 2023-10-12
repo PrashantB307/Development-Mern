@@ -8,3 +8,19 @@ import AddAndUpdateContact from "../components/AddAndUpdateContact";
 import useDisclouse from "../hooks/useDisclouse";
 import { toast } from "react-toastify";
 
+const ContactCard = ({ contact }) => {
+  const { isOpen, onClose, onOpen } = useDisclouse();
+
+  const deleteContact = async (id) => {
+    try {
+      await deleteDoc(doc(db, "contacts", id));
+      toast.success("Contact Deleted Successfully");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  
+};
+
+export default ContactCard;
