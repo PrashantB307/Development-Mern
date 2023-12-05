@@ -20,3 +20,18 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Allproducts from './pages/allproducts/AllProducts';
 
+
+
+
+// ===================>     Admin (Protected Route)    <======================
+
+// eslint-disable-next-line react/prop-types
+const ProtectedRouteForAdmin = ({children})=> {
+  const admin = JSON.parse(localStorage.getItem('user'))
+
+  if(admin.user.email === 'pb28.rkt@gmail.com'){
+    return children
+  }else{
+    return <Navigate to={'/login'} />
+  }
+}
