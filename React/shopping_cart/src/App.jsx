@@ -23,7 +23,12 @@ import Allproducts from './pages/allproducts/AllProducts';
 function App() {
   return (
     <MyState>
-      
+      <Router>
+        <Routes>
+          
+        </Routes>
+        <ToastContainer />
+      </Router>
     </MyState>
   );
 }
