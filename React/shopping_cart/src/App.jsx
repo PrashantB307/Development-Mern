@@ -20,7 +20,15 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Allproducts from './pages/allproducts/AllProducts';
 
+function App() {
+  return (
+    <MyState>
+      
+    </MyState>
+  );
+}
 
+export default App;
 
 
 // ===================>     User (Protected Route)    <======================
