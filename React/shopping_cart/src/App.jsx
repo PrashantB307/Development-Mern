@@ -25,7 +25,39 @@ function App() {
     <MyState>
       <Router>
         <Routes>
+        <Route path="/" element={<Home />} />
+          <Route path="/allproducts" element={<Allproducts />} />
+          <Route path="/order" element={
+            <ProtectedRoute>
+                <Order/>
+            </ProtectedRoute>
+          } />
           
+          <Route path="/cart" element={<Cart/>} />
+          
+          <Route path="/dashboard" element={
+            <ProtectedRouteForAdmin>
+              <Dashboard />
+            </ProtectedRouteForAdmin>
+          } />
+          
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/productinfo/:id" element={<ProductInfo />} />
+          
+          <Route path="/addproduct" element={
+            <ProtectedRouteForAdmin>
+              <AddProduct />
+            </ProtectedRouteForAdmin>
+          } />
+          
+          <Route path="/updateproduct" element={
+            <ProtectedRouteForAdmin>
+              <UpdateProduct />
+            </ProtectedRouteForAdmin>
+          } />
+          
+          <Route path="/*" element={<NoPage />} />
         </Routes>
         <ToastContainer />
       </Router>
