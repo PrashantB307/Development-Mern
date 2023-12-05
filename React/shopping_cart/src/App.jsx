@@ -23,6 +23,19 @@ import Allproducts from './pages/allproducts/AllProducts';
 
 
 
+// ===================>     User (Protected Route)    <======================
+
+// eslint-disable-next-line react/prop-types
+export const ProtectedRoute = ({ children }) => {
+  const user = localStorage.getItem('user');
+  if (user) {
+    return children
+  } else {
+    return <Navigate to={'/login'} />
+  }
+}
+
+
 // ===================>     Admin (Protected Route)    <======================
 
 // eslint-disable-next-line react/prop-types
