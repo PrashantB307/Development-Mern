@@ -70,6 +70,40 @@ function myState(props) {
 
   }
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [product, setProduct] = useState([]);
+
+  //  =====================>   Get Product    <====================
+
+  const getProductData = async () => {
+    setLoading(true)
+    try {
+      const q = query(
+        collection(firedb, 'products'),
+        orderBy("time"),
+        // limit(5)
+      );
+      const data = onSnapshot(q, (QuerySnapshot) => {
+        let productsArray = [];
+        QuerySnapshot.forEach((doc) => {
+          productsArray.push({ ...doc.data(), id: doc.id });
+        });
+        setProduct(productsArray)
+        setLoading(false);
+      });
+      return () => data;
+    } catch (error) {
+      console.log(error)
+      setLoading(false)
+    }
+  }
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect( () => {
+    getProductData();
+  }, [])
+
+  
   
 }
 
