@@ -43,6 +43,33 @@ function myState(props) {
 
   // =====================>    Add Product Section    <=========================
 
+  const addProduct = async () => {
+    
+    setLoading(true)
+    
+    if (products.title == null || products.price == null || products.imageUrl == null || products.category == null || products.description == null) {
+      return toast.error("Please Fill All Fields.")
+    }
+
+    try {
+      const productRef = collection(firedb, 'products');
+      await addDoc(productRef, products)
+      toast.success("Product Added Successfully");
+
+      setTimeout( () => {
+        window.location.href = '/dashboard'
+      }, 800);
+      
+      getProductData();
+      setLoading(false)
+
+    } catch (error) {
+      console.log(error);  
+      setLoading(false) 
+    }
+
+  }
+
   
 }
 
