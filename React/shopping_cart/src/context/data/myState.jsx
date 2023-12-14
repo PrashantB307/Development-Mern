@@ -20,6 +20,29 @@ function myState(props) {
     }
   }
 
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [loading, setLoading] = useState(false);
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [products, setProducts] = useState({
+    title: null,
+    price: null,
+    imageUrl: null,
+    category: null,
+    description: null,
+    time: Timestamp.now(),
+    date: new Date().toLocaleString(
+      "en-US",
+      {
+        month: "short",
+        day: "2-digit",
+        year: "numeric",
+      }
+    )
+  });
+
+  // =====================>    Add Product Section    <=========================
+
   
 }
 
