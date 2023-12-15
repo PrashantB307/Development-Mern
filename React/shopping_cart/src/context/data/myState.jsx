@@ -104,6 +104,33 @@ function myState(props) {
   }, [])
 
   
+  //====================>    Update Product Function      <========================
+
+  const edithandle = (item) => {
+    setProducts(item);
+  }
+
+  const updateProduct = async () => {
+
+    setLoading(true)
+
+    try {
+      
+      await setDoc(doc(firedb, 'products', products.id), products)
+      toast.success("Product Updated SuccessFully");
+      setTimeout( () => {
+        window.location.href = '/dashboard'
+      }, 800);
+      getProductData();
+      setLoading(false)
+
+    } catch (error) {
+      console.log(error);
+      setLoading(false)
+    }
+  }
+
+   
   
 }
 
