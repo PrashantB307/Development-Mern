@@ -131,6 +131,25 @@ function myState(props) {
   }
 
    
+  //====================>    Delete Product Function      <========================
+
+  const deleteProduct = async (item) => {
+
+    setLoading(true)
+
+    try {
+      await deleteDoc(doc(firedb, 'products', item.id))
+      toast.success("Product Deleted SuccessFully");
+      getProductData();
+      setLoading(false)
+
+    } catch (error) {
+      console.log(error);
+      setLoading(false)
+    }
+  }
+
+
   
 }
 
