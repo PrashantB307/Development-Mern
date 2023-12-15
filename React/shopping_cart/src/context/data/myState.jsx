@@ -174,7 +174,49 @@ function myState(props) {
   }
 
 
-  
+  //====================>    All  User Data      <========================
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [user, setUser] = useState([]);
+
+  const getUserData = async () => {
+    setLoading(true)
+    try {
+      const result = await getDocs(collection(firedb, "users"))
+      const usersArray = [];
+      result.forEach((doc) => {
+        usersArray.push(doc.data());
+        setLoading(false)
+      });
+      setUser(usersArray);
+      // console.log(usersArray)
+      setLoading(false);
+    } catch (error) {
+      console.log(error)
+      setLoading(false)
+    }
+  }
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  useEffect( () => {
+    getOrderData();
+    getUserData();
+  }, []);
+
+  const [searchkey, setSearchkey] = useState('')
+  const [filterType, setFilterType] = useState('')
+  const [filterPrice, setFilterPrice] = useState('')
+
+  return (
+    <myContext.Provider value={{mode, toggleMode, loading, setLoading,
+    products, setProducts, addProduct, product, edithandle, updateProduct,
+    deleteProduct, order, user, searchkey, setSearchkey, filterType, setFilterType
+    , filterPrice, setFilterPrice
+    }}>
+      {props.children}
+    </myContext.Provider>
+
+  );
 }
 
 export default myState;
