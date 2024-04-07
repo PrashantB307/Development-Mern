@@ -211,3 +211,82 @@ while(k < ab.length){
     }
     i++,j++,k++;
 }
+
+
+// XXXXXXXXXXXXXXXXXXXXXXXX=====>  7 Apr 2024  <=====XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// 1. Reverse each word of the sentence.
+
+var str = "mai hu giyan mera gala h bhut surila";
+var newStr = str.split(" ").map(function(word) {
+    return word.split("").reverse().join("");
+});
+
+console.log(newStr.join(" "));  // ==> iam uh nayig arem alag h tuhb alirus  
+
+
+// 2. How to check if an Object is an Array or not?
+
+function checkArray(arr){
+    return Array.isArray(arr);
+}
+
+console.log(checkArray([]));  // ===> true
+console.log(checkArray({}));  // ===> false
+
+
+// 3. How to empty an Array in JavaScript?
+
+var arr6 = [1,2,3,4,5,6];
+
+arr6.length = 0;
+
+console.log(arr6);  // ===> []
+console.log(arr6.length);  // ===> 0 
+
+
+// 4. How would you check a Number is an Integer or Not ?
+
+function isInteger(val){
+    if(val % 1 === 0){
+        return "Integer"
+    }else{
+        return "Not Integer";
+    }
+}
+
+console.log(isInteger(123));   // ===>  Integer
+console.log(isInteger(12.3));  // ===>  Not Integer
+
+
+// 5. Copy the Array like this --> [1, 2, 3] ==> [1, 2, 3, 1, 2, 3]
+
+function duplicate(arr){
+    return arr.concat(arr);
+}
+
+var arr7 = [1,2,3];
+console.log(duplicate(arr7));  // ===>  [ 1, 2, 3, 1, 2, 3 ]  
+
+
+// 6. Write a function for reverse a number?
+
+function reverse(num){
+    var ans = Number(num.toString().split("").reverse().join(""));
+    return ans;
+}
+
+function reverse2(num){
+    var ans = 0;
+    while(num > 0){
+        var rem = num % 10;
+        ans = ans * 10 + rem;
+        num = Math.floor(num / 10);
+    }
+
+    return ans;
+}
+
+var num = 12345;
+console.log(reverse(num));   // ===> 54321
+console.log(reverse2(num));  // ===> 54321
