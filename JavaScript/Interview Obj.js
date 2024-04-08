@@ -6,7 +6,7 @@
 // ======> Qu. 1 
 //---------------
 
-let arr = [1, 4, 2, 3, 2, 4, 1, 5, 6, 1, 1];
+var arr = [1, 4, 2, 3, 2, 4, 1, 5, 6, 1, 1];
 let obj = {};
 for(let i = 0; i < arr.length; i++){
     obj[arr[i]] = obj[arr[i]] == undefined ? 1 : obj[arr[i]] + 1;
@@ -290,3 +290,111 @@ function reverse2(num){
 var num = 12345;
 console.log(reverse(num));   // ===> 54321
 console.log(reverse2(num));  // ===> 54321
+
+
+// 7. String Palindrome or not ? 
+
+function isPalindrome(str){
+    var palin = str.split("").reverse().join("");
+    if(palin === str){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+console.log(isPalindrome("kanak"));    // ==> true
+console.log(isPalindrome("panaap"));   // ==> false
+
+
+// 8. Sort the alphabet of the string.
+
+function sorting(str){
+    return str.split("").sort().join("");
+}
+
+console.log(sorting("pawan"));  // ==> aanpw
+
+
+// 9. Capitalise the 1st character of each word.
+
+function capitalise(str){
+    var allWord = str.split(" ").map(function(word) {
+        return word.charAt(0).toUpperCase() + word.substring(1);
+    });
+
+    return allWord.join(" ");
+}
+
+console.log(capitalise("hello bhai kaise ho"));  //===> Hello Bhai Kaise Ho
+
+
+// 10. Count the occurance of all character in string.
+
+function occurance(str) {
+    var occ = {};
+    str.split("").forEach(ch => {
+        if(occ.hasOwnProperty(ch) === false){
+            occ[ch] = 1;
+        }else{
+            occ[ch]++;
+        }
+    }); 
+
+    return occ;
+}
+
+console.log(occurance("pawan"));  //===>  { p: 1, a: 2, w: 1, n: 1 }
+console.log(occurance("palindrimic"));  //===> { p: 1, a: 1, l: 1, i: 3, n: 1, d: 1, r: 1, m: 1, c: 1 }
+
+
+// 11. Add all no. of arr.
+
+var arr = [1,2,3,4,5,6,7,8,9];
+var sum = 0;
+arr.forEach(n => {
+    sum += n;
+});
+
+console.log(sum);  // ===> 45
+
+
+// 12. Add only number from the Array.
+
+function addNum(arr){
+    var sum = 0;
+    arr.map(ele => {
+        if(typeof ele === "number"){
+            sum += ele;
+        }
+    });
+
+    return sum;
+}
+
+console.log(addNum(["sdaf", 45, "hg", 543, "gdfg", 43]));  // ==> 631
+
+
+// 13. Add only "male" person from the Array.
+
+var arr = [
+    {name : "pawan", gender : "male"},
+    {name : "rishita", gender : "female"},
+    {name : "raishi", gender : "male"},
+    {name : "shivani", gender : "female"},
+    {name : "shivam", gender : "male"}
+]
+
+var newArr = arr.filter(ele => {
+    if(ele.gender === "male"){
+        return ele;
+    }
+});
+
+console.log(newArr);
+
+// [
+//     { name: 'pawan', gender: 'male' },
+//     { name: 'raishi', gender: 'male' },
+//     { name: 'shivam', gender: 'male' }
+// ]
