@@ -398,3 +398,88 @@ console.log(newArr);
 //     { name: 'raishi', gender: 'male' },
 //     { name: 'shivam', gender: 'male' }
 // ]
+
+
+// 14. Clone an Array.
+
+function clone(arr){
+    return [...arr];
+}
+
+function clone2(arr) {
+    var newArr = [];
+    arr.forEach(e => {
+        newArr.push(e);
+    });
+
+    return newArr;
+}
+
+var cloneArr = clone([1,2,3,4,5]);
+console.log(cloneArr);  // ===> [ 1, 2, 3, 4, 5 ]
+console.log(clone2([1, 2, 3, 4]));  // ===> [ 1, 2, 3, 4 ]
+
+
+//15. Create a Function that takes arguments and return its Type.
+
+function type(args) {
+    return typeof(args);
+}
+
+console.log(type(5));     // ==> number
+console.log(type("SGfss"));  // ==> string
+console.log(type([34,6,43,23]));  //==> object
+console.log(type(false)); // ==> boolean
+
+
+// 16. Print the Array elements from starting till N.
+
+function rangeStarting(args, n = 1) {
+    if(n < args.length){
+        for(var i = 0; i < n; i++){
+            console.log(args[i]);
+        }
+    }else{
+        console.log("Index Out of Bound");
+    }
+}
+
+rangeStarting([2,3,4,5], 3);  // 2,3,4
+
+
+// 17. Print the Array elements from last till N.
+
+function rangeLast(args, n = 1) {
+    if(n < args.length){
+        for(var i = 0; i < n; i++){
+            console.log(args[args.length - 1 - i]);
+        }
+    }else{
+        console.log("Index Out of Bound");
+    }
+}
+
+rangeLast([1,2,3,4,5], 4);  // 5 4 3 2
+
+
+// 18. Find the most frequent  item in the array.
+
+function maxFreq(arr) {
+    var freq = {};
+    arr.forEach(function (elem) {
+        if(freq.hasOwnProperty(elem)){
+            freq[elem]++;
+        }else{
+            freq[elem] = 1;
+        }
+    });
+
+    var ans = Object.keys(freq).reduce(function(a, b) {
+        return freq[a] > freq[b] ? a : b;
+    })
+
+    console.log(ans, freq[ans]);
+}
+
+maxFreq([4,2,3,4,5,2,4,2,3,4,6,7,6,5,4]);
+
