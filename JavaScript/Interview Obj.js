@@ -478,8 +478,39 @@ function maxFreq(arr) {
         return freq[a] > freq[b] ? a : b;
     })
 
-    console.log(ans, freq[ans]);
+    console.log(ans + " -> " + freq[ans] + " Times");
 }
 
-maxFreq([4,2,3,4,5,2,4,2,3,4,6,7,6,5,4]);
+maxFreq([4,2,3,4,5,2,4,2,3,4,6,7,6,5,4]);   // ==> 4 -> 5 Times
 
+
+// 19. WAP to shuffle a Array.
+
+function shuffle(arr) {
+    
+    var len = arr.length;
+
+    while(len > 0){
+        len--;
+        var idx = Math.floor(Math.random() * len);
+        var temp = arr[len];
+        arr[len] = arr[idx];
+        arr[idx] = temp;
+    }
+
+    return arr;
+}
+
+console.log(shuffle([1,2,3,4,5,6,7]));  // ==> [2, 7, 4, 6, 1, 5, 3]
+
+
+// 20. Union of Two Array.
+
+function union(arr1, arr2){
+    var newArr = arr1.concat(arr2);
+    var setArr = [...new Set(newArr)];
+
+    return setArr;
+}
+
+console.log(union([1,2,3,4], [1,4,5,6,7]));  // ==> [1, 2, 3, 4, 5, 6, 7 ]
