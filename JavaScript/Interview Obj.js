@@ -514,3 +514,31 @@ function union(arr1, arr2){
 }
 
 console.log(union([1,2,3,4], [1,4,5,6,7]));  // ==> [1, 2, 3, 4, 5, 6, 7 ]
+
+
+//=================================================
+
+const arr_1 = [1, 2, 3];
+arr_1[4] = 5;
+console.log(arr_1.length);   // ===> 5
+
+
+//   We want to assign 40 in arr_2   ====>
+const [, , , arr_2] = [10, 2, 30, 40, 6];
+console.log(arr_2);   // ===> 40
+
+const {3 : arr_3} = [10, 2, 30, 40, 6];
+console.log(arr_3);  //  ===> 40  (Object Destructuring)
+
+
+//==================================================
+
+
+function abc() {
+    console.log("Hi");   // ===>  Hi
+}
+
+const value = new abc();
+console.log(value);  // ===>  abc {} (Empty Object)
+
+
