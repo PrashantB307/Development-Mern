@@ -542,3 +542,24 @@ const value = new abc();
 console.log(value);  // ===>  abc {} (Empty Object)
 
 
+//======================================================
+
+var x_x = 20;
+
+function foo_2(){
+    console.log(x_x);
+    var x_x = 10;
+}
+
+foo_2();   //   undefined
+
+
+//==========================================================
+
+
+console.log(x_x2);
+let x_x2 = 10;   //  error
+
+
+t
+
