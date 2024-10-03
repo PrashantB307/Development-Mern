@@ -586,3 +586,33 @@ console.log('End');
 
 //  End  -->  Promise  -->  Timeout
 
+
+//============================================================
+
+
+async function foo() {
+    return 'Hello World'
+}
+
+const res = foo();
+console.log(res);   //  Promise { 'Hello World' }
+
+
+//=============================================================
+
+
+console.log([1, 2] == [1, 2]);   //   false
+
+
+//=============================================================
+
+// Print all no. which are less than 3 in Array.
+
+const Arr_1 = [0, 1, 2, 3, 4, 5, 6];
+const newArr = Arr_1.filter( (i) => {
+    return i < 3;
+});
+
+console.log(newArr);  //   [ 0, 1, 2 ]
+
+
